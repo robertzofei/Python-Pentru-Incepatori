@@ -1,0 +1,22 @@
+project:
+  type: book
+
+book:
+  title: "Python pentru Începatori"
+  author: "Robert Zofei"
+  date: "5/3/2026"
+  chapters:
+    - index.qmd
+    - intro.ipynb
+    - summary.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+  pdf:
+    documentclass: scrreprt
