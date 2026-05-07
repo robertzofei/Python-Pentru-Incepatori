@@ -4,7 +4,17 @@
     "href": "index.html",
     "title": "Python pentru Începatori",
     "section": "",
-    "text": "Prefață\nAceastă carte a fost realizată folosind Quarto\nMai multe despre Quarto aici: https://quarto.org/docs/books.",
+    "text": "Prefață",
+    "crumbs": [
+      "Prefață"
+    ]
+  },
+  {
+    "objectID": "index.html#capitole",
+    "href": "index.html#capitole",
+    "title": "Python pentru Începatori",
+    "section": "Capitole:",
+    "text": "Capitole:\n\nIf/ Else și Boolean\nReferințe\n\nAceastă carte a fost realizată folosind Quarto.\nMai multe despre Quarto aici: https://quarto.org/docs/books.",
     "crumbs": [
       "Prefață"
     ]
@@ -12,21 +22,21 @@
   {
     "objectID": "ifElseBoolean.html",
     "href": "ifElseBoolean.html",
-    "title": "1  If/ Else si Boolean",
+    "title": "1  If/ Else și Boolean",
     "section": "",
     "text": "1.1 Tipul de date Boolean\nMai tineti minte ca in tipurile de date cu care am lucrat pana acum, adica cele pentru numere si siruri de caractere, noi puteam sa memoram orice numar sau orice text pe care ni le imagiam? Ei bine, acum o sa lucram cu un tip de date in care poti stoca doar doua valori: True sau False, adica adevarat sau fals. Doua lucruri importante: valorile acestea nu apar scrise intre ghilimele (cum erau string-urile), si incep mereu cu litera mare.\na = True\nb = False\nprint(a,b)\n\nTrue False\nPoate ca va intrebati de unde vine aceasta denumire de Boolean. Acest tip de date este numit dupa matematicianul britanic George Boole. El a inventat algebra logica ce ii poarta numele si a pus bazele functionarii tuturor calculatoarelor si a limbajelor de programare din ziua de azi.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>If/ Else si Boolean</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>If/ Else și Boolean</span>"
     ]
   },
   {
     "objectID": "ifElseBoolean.html#operatorii-de-comparare",
     "href": "ifElseBoolean.html#operatorii-de-comparare",
-    "title": "1  If/ Else si Boolean",
+    "title": "1  If/ Else și Boolean",
     "section": "1.2 Operatorii de Comparare (==, !=, <, >)",
     "text": "1.2 Operatorii de Comparare (==, !=, &lt;, &gt;)\n\n\n\nOperator\nCe înseamnă\n\n\n\n\n==\nEgal cu\n\n\n!=\nNu e egal cu\n\n\n&lt;\nMai mic decât\n\n\n&gt;\nMai mare decât\n\n\n&lt;=\nMai mic sau egal cu\n\n\n&gt;=\nMai mare sau egal cu\n\n\n\nHaideti sa vedem cateva exemple:\n\n1 == 1\n\nTrue\n\n\n\n4 == 32\n\nFalse\n\n\n\n2 != 3\n\nTrue\n\n\n\n2 != 2\n\nFalse\n\n\n\n64 == 64.0\n\nTrue\n\n\n\n'salut' == 'salut'\n\nTrue\n\n\n\n'salut' == 'Salut'\n\nFalse\n\n\n\nTrue == True\n\nTrue\n\n\n\nTrue != False\n\nTrue",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>If/ Else si Boolean</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>If/ Else și Boolean</span>"
     ]
   }
 ]
