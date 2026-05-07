@@ -221,3 +221,4 @@ __marimo__/
 .quarto/
 **/*.quarto_ipynb
 _book/
+/.quarto/

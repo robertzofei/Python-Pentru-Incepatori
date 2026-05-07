@@ -1,5 +1,9 @@
-# Preface {.unnumbered}
+# Prefață {.unnumbered}
 
-This is a Quarto book.
+## Capitole
+1. [If/ Else și Boolean](ifElseBoolean.ipynb)
 
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
+
+Această carte a fost realizată folosind Quarto.
+
+Mai multe despre Quarto aici: <https://quarto.org/docs/books>.
