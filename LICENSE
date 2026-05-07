@@ -1,11 +1,18 @@
-Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International
-This license requires that reusers give credit to the creator.
-It allows reusers to copy and distribute the material in any medium or format in unadapted form and for noncommercial purposes only.
+License for "Python Pentru Începători".
 
-BY Credit must be given to you, the creator.
-NC Only noncommercial use of your work is permitted.
-Noncommercial means not primarily intended for or directed towards commercial advantage or monetary compensation.
-ND No derivatives or adaptations of your work are permitted.
+1. The Prose and Illustrations (The Book) 
+The prose, text, and original illustrations of this book are licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License.
+This license requires that reusers give credit to the creator and allows reusers to copy and distribute the material in any medium or format in unadapted form and for noncommercial purposes only.
+Credit must be given to the creator, Robert-Cristian Zofei.
+Only noncommercial use of the work is permitted, which means it is not primarily intended for or directed towards commercial advantage or monetary compensation.
+No derivatives or adaptations of the work are permitted under this section of the license.
+
+2. The Code Examples
+The source code and programming examples contained within this repository are licensed separately under the MIT License.
+This grants permission for any person obtaining a copy of the code to use, copy, modify, and distribute it without restriction for both personal and commercial projects.
+This ensures that while the narrative and structure of the book are protected for the author’s exclusive commercial use,
+the technical tools provided are free for the community to build upon, adapt, and implement in professional environments.
 
 Python Pentru Începători © 2026 by Robert-Cristian Zofei is licensed under CC BY-NC-ND 4.0.
-To view a copy of this license, visit https://creativecommons.org/licenses/by-nc-nd/4.0/
+The included code examples are licensed under the MIT License.
+To view a copy of the Creative Commons license, visit https://creativecommons.org/licenses/by-nc-nd/4.0/
