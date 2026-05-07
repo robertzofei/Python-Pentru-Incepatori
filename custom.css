@@ -1,0 +1,12 @@
+/* Target the dark mode toggle icon */
+.quarto-color-scheme-toggle {
+  font-size: 12rem !important; /* Makes the icon bigger */
+  padding: 10px !important;    /* Gives more "clickable" space around it */
+  transition: transform 0.2s;  /* Makes it feel smooth when you hover */
+}
+
+/* Optional: Make it grow slightly when you hover over it */
+.quarto-color-scheme-toggle:hover {
+  transform: scale(1.0);
+  color: #ffca28; /* Changes color to a "sun" yellow on hover */
+}

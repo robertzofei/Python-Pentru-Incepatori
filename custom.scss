@@ -1,0 +1,18 @@
+/* Targetăm ID-ul specific și iconița din interior */
+#quarto-color-scheme-toggle, 
+.quarto-color-scheme-toggle, 
+#quarto-color-scheme-toggle i,
+.quarto-color-scheme-toggle .bi {
+  font-size: 100 !important; /* Mărește iconița */
+  width: 40px !important;       /* Lățește zona butonului */
+  height: 40px !important;      /* Înalță zona butonului */
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+/* Opțional: mutăm puțin butonul dacă e prea lipit de margine */
+.quarto-color-scheme-toggle {
+  margin-left: 15px !important;
+  margin-right: 15px !important;
+}
