@@ -1,4 +1,8 @@
-* linguist-vendored
+.quarto/** linguist-vendored
+_book/** linguist-vendored
+_extensions/** linguist-vendored
+test_files/** linguist-vendored
+site_libs/** linguist-vendored
 
-*.qmd linguist-vendored=false
 *.qmd linguist-language=Markdown
+*.qmd linguist-vendored=false
