@@ -224,3 +224,6 @@ _book/
 /.quarto/
 
 .rules/
+
+test.html
+/*_files/
