@@ -131,36 +131,92 @@ not True
 
 ## If/ Else
 
-Acum trecem la cea mai importanta parte: structurile de decizie.
-Noi vrem sa se execute o bucata de cod daca si nu mai daca se indeplineste o conditie, dar cum putem sa facem asta? Pai, cu ajutorul instructiunii **if**.
+Vrem sa se execute o bucata de cod daca si nu mai daca se indeplineste o conditie, dar cum putem sa facem asta? Pai, cu ajutorul structurilor de decizie **(if, else, elif)**:
+
+### Instructiunea if
+
+Sa zicem ca avem un program care verifica daca numele cuiva este "Alin". Ne prefacem ca cineva a introdus mai devreme o valoare in variabila *nume*.
+
+```{python}
+nume = "Alin"
+if nume == "Alin":
+    print("Salut, Alin!")
+```
+
+In limbaj natural, am citi liniile de cod de mai sus astfel:
+
+- In variabila **nume** se memoreaza textul "Alin"
+- Daca valoarea din variabila **nume** este aceeasi sau este egala cu textul "Alin", atunci se afiseaza pe ecran mesajul "Salut, Alin!"
+
+Daca expresia urmata de if este adevarata, sau, cu alte cuvinte, conditia a fost indeplinita, atunci toate liniile de cod ce scrise cu alineat imediat sub instructiunea if se vor executa.  Acest alineat, in lumea programarii, se numeste indentare, si se obtine apasand tasta **tab**. Daca expresia se evalueaza ca fiind falsa, insa, atunci calculatorul ignora liniile de cod indentate aflate imediat sub if.
+
+Instructiunea **if** contine:
+
+1. Cuvantul cheie **if**
+2. O conditie (adica o expresie care se evalueaza ca fiind True sau False)
+3. Doua puncte **:**
+4. Incepand cu linia urmatoare, un bloc indentat de cod (numit si clauza if)
+
+
+### Instructiunea else
 
 Sa zicem ca avem un site si vrem sa verificam daca un utilizator si-a introdus parola corecta.
 
 ```{python}
 parola = "xyz"
 
-if parola == "xyz":
-    print("Acces permis.")
-else:
+if parola == "xyz": 
+    print("Acces permis.") 
+else: 
     print("Ati introdus parola gresita.")
 ```
 
 In limbaj natural, am citi aceste linii de cod astfel: 
-"Parola introdusa de utilizator este *xyz*, daca parola este *xyz*, atunci se afiseaza pe ecran mesajul *Acces permis*. Altfel, se afiseaza mesajul *Ati introdus parola gresita* ".
 
-Daca expresia urmata de if este adevarata, sau, cu alte cuvinte, conditia a fost indeplinita, atunci toate liniile de cod ce scrise cu alineat imediat sub instructiunea if se vor executa.  Acest alineat, in lumea programarii, se numeste indentare. Daca expresia se evalueaza ca fiind falsa, insa, atunci pur si simplu se trece peste liniile de cod indentate aflate imediat sub if.
+- Parola introdusa de utilizator este **xyz**. 
+- Daca parola este **xyz**, atunci se afiseaza pe ecran mesajul "Acces permis". 
+- Altfel, se afiseaza mesajul "Ati introdus parola gresita."
 
-### Structura de decizie if
+Instructiunea **else** contine:
 
-Structura de decizie if contine:
+1. Cuvantul cheie **else**
+2. Doua puncte **:**
+3. Incepand cu linia urmatoare, un bloc indentat de cod (numit si clauza else)
 
-1. Cuvantul cheie **if**
-2. O conditie (adica o expresie care se evalueaza ca fiind True sau False)
-3. Semnul de doua puncte (:)
-4. Incepand cu linia urmatoare, un bloc indentat de cod (numit clauza)
+### Instructiunea elif
 
-### Structura de decizie else
+Ar putea exista situatia in care trebuie sa verificam mai multe cazuri. In aceasta situatie folosim instructiunea **elif**, care inseamna **else if**. Aceasta instructiune poate fi folosita doar daca urmeaza dupa o instructiune **if** sau o alta instructiune **elif**.
 
-Structura de decizie else contine:
+Sa luam un exemplu in care verificam varsta cuiva:
 
-### Structura de decizie elif
+```{python}
+varsta = 1520 # de ani
+
+if varsta < 18:
+    print("Esti copil.")
+elif varsta > 1000:
+    print("🧛 Esti vampir.")
+elif varsta > 18:
+    print("Esti adult.")
+```
+
+Observati ca ordinea instructiunilor **elif** din acest exemplu este una avantajoasa. Daca inversam cele doua **elif**-uri, programul ar fi putut oferi raspunsuri gresite cand valoarea varstei depasea 1000. Ar fi spus ca o persoana de 1001 de ani este adult. Asta se intampla pentru ca expresiile se evalueaza pe rand de sus in jos. Odata ce una este corecta, se executa codul din clauza instructiunii respective, iar restul nu se mai verifica.
+
+```{python}
+# Varianta gresita
+varsta = 1001 # de ani
+
+if varsta < 18:
+    print("Esti copil.")
+elif varsta > 18:
+    print("Esti adult.")
+elif varsta > 1000:
+    print("🧛 Esti vampir.")
+```
+
+Instructiunea **elif** contine:
+
+1. Cuvantul cheie **elif**
+2. O conditie (care se evalueaza cu True sau False)
+3. Doua puncte **:**
+4. Incepand cu linia urmatoare, un bloc indentat de cod (numit si clauza elif)
