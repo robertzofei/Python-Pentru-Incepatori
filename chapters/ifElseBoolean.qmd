@@ -1,0 +1,166 @@
+---
+title: If/ Else și Boolean
+jupyter: python3
+---
+
+Astazi vom invata calculatorul sa ia decizii singur. Pentru a putea face asta, avem nevoie sa intelegem trei concepte: tipul de date Boolean, operatorii de comparatie, si instructiunile if/ else.
+
+## Tipul de date Boolean
+In tipurile de date cu care am lucrat pana acum, adica cele pentru numere si siruri de caractere, puteam sa memoram aproape orice numar sau text pe care ni le doream. Ei bine, variabilele de tip Boolean pot stoca doar doua valori: True sau False, adica adevarat sau fals. Doua lucruri importante: valorile acestea nu apar scrise intre ghilimele (cum erau string-urile), si incep mereu cu litera mare.
+
+```{python}
+a =  "text"
+b = True
+print(type(a))
+print(type(b))
+```
+
+Asta inseamna ca variabila **a** este de tip string, iar variabila **b** este de tip Boolean.
+
+```{python}
+a = True
+b = False
+print(a,b)
+```
+
+Poate ca va intrebati de unde vine aceasta denumire de Boolean. Acest tip de date este numit dupa matematicianul britanic George Boole. El a inventat algebra logica si a pus bazele functionarii tuturor calculatoarelor si a limbajelor de programare pe care le folosim noi astazi.
+
+## Operatorii de Comparatie (==,  !=,  <,  >)
+
+De multe ori, o decizie implica comparatia dintre doua sau mai multe valori. Pentru asta, avem niste operatori speciali:
+
+| Operator | Ce înseamnă |
+| :--- | :--- |
+| `==` | Egal cu |
+| `!=` | Nu e egal cu |
+| `<` | Mai mic decât |
+| `>` | Mai mare decât |
+| `<=` | Mai mic sau egal cu |
+| `>=` | Mai mare sau egal cu |
+
+Haide sa incepem prin a compara niste numere intre ele (rezultatul va aparea sub bucata de cod):
+
+```{python}
+1 == 1
+```
+
+```{python}
+4 == 32
+```
+
+```{python}
+2 != 3
+```
+
+```{python}
+2 != 2
+```
+
+```{python}
+64 == 64.0
+```
+
+---
+Putem compara si bucati de text:
+
+```{python}
+'salut' == 'salut'
+```
+
+```{python}
+'salut' == 'Salut'
+```
+
+---
+
+Pana ca si valorile de adevar pot fi comparate intre ele:
+
+```{python}
+True == True
+```
+
+```{python}
+True != False
+```
+
+```{pyodide}
+a = 1
+print(a)
+```
+
+### Diferenta dintre operatorul = si operatorul ==
+
+Acesti doi operatori sunt usor de confundat, iata ce trebuie sa retineti ca sa nu-i incurcati:
+
+- Operatorul = pune valoarea din dreapta in variabila din stanga
+- Operatorul == (egal cu) verifica daca doua valori sunt egale
+
+Exemplu:
+
+```{python}
+a = 2 
+print(a == 2) # verifica daca valoarea din variabila 'a' este egala cu 2
+```
+
+## Operatori Booleeni (and, or, not)
+Avem, de asemenea, la dispozitia noastra si operatorii, **and**, **or**, si respectiv, **not**.
+
+Operatorul **and** verifica daca absolut toate expresiile comparate sunt adevarate.
+```{python}
+(1 < 5) and (2 < 5)
+```
+
+```{python}
+(1 < 5) and (2 < 5) and (10 < 5)
+```
+
+Vedem ca e de ajuns ca o singura expresie sa fie falsa ca rezultatul sa fie fals.
+
+
+Operatorul **or** verifica daca cel putin una dintre expresii este adevarata.
+```{python}
+(1 == 2) or (2 == 2)
+```
+
+Operatorul **not** neaga valoarea de adevar. Spre deosebire de **and** si **or**, **not** opereaza pe o singura expresie. Pur si simplu returneaza valoarea opusa.
+
+```{python}
+not True
+```
+
+
+## If/ Else
+
+Acum trecem la cea mai importanta parte: structurile de decizie.
+Noi vrem sa se execute o bucata de cod daca si nu mai daca se indeplineste o conditie, dar cum putem sa facem asta? Pai, cu ajutorul instructiunii **if**.
+
+Sa zicem ca avem un site si vrem sa verificam daca un utilizator si-a introdus parola corecta.
+
+```{python}
+parola = "xyz"
+
+if parola == "xyz":
+    print("Acces permis.")
+else:
+    print("Ati introdus parola gresita.")
+```
+
+In limbaj natural, am citi aceste linii de cod astfel: 
+"Parola introdusa de utilizator este *xyz*, daca parola este *xyz*, atunci se afiseaza pe ecran mesajul *Acces permis*. Altfel, se afiseaza mesajul *Ati introdus parola gresita* ".
+
+Daca expresia urmata de if este adevarata, sau, cu alte cuvinte, conditia a fost indeplinita, atunci toate liniile de cod ce scrise cu alineat imediat sub instructiunea if se vor executa.  Acest alineat, in lumea programarii, se numeste indentare. Daca expresia se evalueaza ca fiind falsa, insa, atunci pur si simplu se trece peste liniile de cod indentate aflate imediat sub if.
+
+### Structura de decizie if
+
+Structura de decizie if contine:
+
+1. Cuvantul cheie **if**
+2. O conditie (adica o expresie care se evalueaza ca fiind True sau False)
+3. Semnul de doua puncte (:)
+4. Incepand cu linia urmatoare, un bloc indentat de cod (numit clauza)
+
+### Structura de decizie else
+
+Structura de decizie else contine:
+
+### Structura de decizie elif

@@ -1,9 +1,10 @@
 # Prefață {.unnumbered}
 
 ## Capitole
-1. [If/ Else și Boolean](ifElseBoolean.ipynb)
+1. [If/ Else și Boolean](chapters/ifElseBoolean.qmd)
 
 
 Această carte a fost realizată folosind Quarto.
 
 Mai multe despre Quarto aici: <https://quarto.org/docs/books>.
+

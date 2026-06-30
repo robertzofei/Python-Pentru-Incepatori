@@ -1,0 +1,10 @@
+---
+title: "Test Page"
+filters:
+  - r-wasm/live
+---
+
+## Live Python Test
+
+```{pyodide}
+print("It works!")

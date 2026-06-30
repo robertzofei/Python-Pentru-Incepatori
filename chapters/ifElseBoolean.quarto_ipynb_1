@@ -1,0 +1,284 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "title: If/ Else și Boolean\n",
+        "jupyter: python3\n",
+        "---\n",
+        "\n",
+        "Astazi vom invata calculatorul sa ia decizii singur. Pentru a putea face asta, avem nevoie sa intelegem trei concepte: tipul de date Boolean, operatorii de comparatie, si instructiunile if/ else.\n",
+        "\n",
+        "## Tipul de date Boolean\n",
+        "In tipurile de date cu care am lucrat pana acum, adica cele pentru numere si siruri de caractere, puteam sa memoram aproape orice numar sau text pe care ni le doream. Ei bine, variabilele de tip Boolean pot stoca doar doua valori: True sau False, adica adevarat sau fals. Doua lucruri importante: valorile acestea nu apar scrise intre ghilimele (cum erau string-urile), si incep mereu cu litera mare."
+      ],
+      "id": "eb34eca9"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "a =  \"text\"\n",
+        "b = True\n",
+        "print(type(a))\n",
+        "print(type(b))"
+      ],
+      "id": "038fc20b",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "Asta inseamna ca variabila **a** este de tip string, iar variabila **b** este de tip Boolean."
+      ],
+      "id": "d21832b5"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "a = True\n",
+        "b = False\n",
+        "print(a,b)"
+      ],
+      "id": "515b3cad",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "Poate ca va intrebati de unde vine aceasta denumire de Boolean. Acest tip de date este numit dupa matematicianul britanic George Boole. El a inventat algebra logica si a pus bazele functionarii tuturor calculatoarelor si a limbajelor de programare pe care le folosim noi astazi.\n",
+        "\n",
+        "## Operatorii de Comparatie (==,  !=,  <,  >)\n",
+        "\n",
+        "De multe ori, o decizie implica comparatia dintre doua sau mai multe valori. Pentru asta, avem niste operatori speciali:\n",
+        "\n",
+        "| Operator | Ce înseamnă |\n",
+        "| :--- | :--- |\n",
+        "| `==` | Egal cu |\n",
+        "| `!=` | Nu e egal cu |\n",
+        "| `<` | Mai mic decât |\n",
+        "| `>` | Mai mare decât |\n",
+        "| `<=` | Mai mic sau egal cu |\n",
+        "| `>=` | Mai mare sau egal cu |\n",
+        "\n",
+        "Haide sa incepem prin a compara niste numere intre ele (rezultatul va aparea sub bucata de cod):"
+      ],
+      "id": "70c787cb"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "1 == 1"
+      ],
+      "id": "0ebc29fb",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "4 == 32"
+      ],
+      "id": "c9b9e87a",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "2 != 3"
+      ],
+      "id": "73bba514",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "2 != 2"
+      ],
+      "id": "fa739288",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "64 == 64.0"
+      ],
+      "id": "d91ae105",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "raw",
+      "metadata": {},
+      "source": [
+        "---"
+      ],
+      "id": "431084e3"
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "Putem compara si bucati de text:"
+      ],
+      "id": "7b845d8c"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "'salut' == 'salut'"
+      ],
+      "id": "a68bda3b",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "'salut' == 'Salut'"
+      ],
+      "id": "9aa9821a",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "Pana ca si valorile de adevar pot fi comparate intre ele:"
+      ],
+      "id": "60dc2a46"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "True == True"
+      ],
+      "id": "0c21636b",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "True != False"
+      ],
+      "id": "ed42ee14",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "```{pyodide}\n",
+        "a = 1\n",
+        "print(a)\n",
+        "```\n",
+        "\n",
+        "## Operatori Booleeni (and, or, not)\n",
+        "Avem, de asemenea, la dispozitia noastra si operatorii, **and**, **or**, si respectiv, **not**.\n",
+        "\n",
+        "Operatorul **and** verifica daca absolut toate expresiile comparate sunt adevarate."
+      ],
+      "id": "9eb27e0b"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "(1 < 5) and (2 < 5)"
+      ],
+      "id": "b0849576",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "(1 < 5) and (2 < 5) and (10 < 5)"
+      ],
+      "id": "c122801a",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "Vedem ca e de ajuns ca o singura expresie sa fie falsa ca rezultatul sa fie fals.\n",
+        "\n",
+        "\n",
+        "Operatorul **or** verifica daca cel putin una dintre expresii este adevarata."
+      ],
+      "id": "efc347c3"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "(1 == 2) or (2 == 2)"
+      ],
+      "id": "a279f28e",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "Operatorul **not** neaga valoarea de adevar. Spre deosebire de **and** si **or**, **not** opereaza pe o singura expresie. Pur si simplu returneaza valoarea opusa."
+      ],
+      "id": "b3699df0"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "not True"
+      ],
+      "id": "fd04367a",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "## If/ Else"
+      ],
+      "id": "9f39b441"
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "name": "python3",
+      "language": "python",
+      "display_name": "Python 3 (ipykernel)",
+      "path": "C:\\Users\\rzofe\\AppData\\Local\\Python\\pythoncore-3.14-64\\share\\jupyter\\kernels\\python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}
