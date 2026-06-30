@@ -200,7 +200,7 @@ elif varsta > 18:
     print("Esti adult.")
 ```
 
-Observati ca ordinea instructiunilor **elif** din acest exemplu este una avantajoasa. Daca inversam cele doua **elif**-uri, programul ar fi putut oferi raspunsuri gresite cand valoarea varstei depasea 1000. Ar fi spus ca o persoana de 1001 de ani este adult. Asta se intampla pentru ca expresiile se evalueaza pe rand de sus in jos. Odata ce una este corecta, se executa codul din clauza instructiunii respective, iar restul nu se mai verifica.
+Observati ca ordinea instructiunilor **elif** din acest exemplu este una avantajoasa. Daca inversam cele doua **elif**-uri, programul ar fi putut oferi raspunsuri gresite cand valoarea varstei depasea 1000. Ar fi spus ca o persoana de 1001 de ani este adult. Asta se intampla pentru ca expresiile se evalueaza pe rand de sus in jos. Odata ce una este corecta, se executa codul din clauza instructiunii respective, iar restul nu se mai verifica. De asemenea, bineinteles ca nu exista persoane de 1000 de ani sau vampiri (mai stii?).
 
 ```{python}
 # Varianta gresita
