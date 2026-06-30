@@ -1,0 +1,3 @@
+_extensions/** linguist-vendored
+test_files/** linguist-vendored
+site_libs/** linguist-vendored
