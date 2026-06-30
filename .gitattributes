@@ -1,3 +1,10 @@
 _extensions/** linguist-vendored
 test_files/** linguist-vendored
 site_libs/** linguist-vendored
+
+.quarto/** linguist-vendored
+_book/** linguist-vendored
+
+*.tex linguist-generated=true
+*.sty linguist-generated=true
+*.cls linguist-generated=true
