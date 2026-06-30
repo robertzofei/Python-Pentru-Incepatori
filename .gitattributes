@@ -8,3 +8,7 @@ _book/** linguist-vendored
 *.tex linguist-generated=true
 *.sty linguist-generated=true
 *.cls linguist-generated=true
+
+# *.qmd linguist-language=Markdown
+
+*.qmd linguist-language=Python
