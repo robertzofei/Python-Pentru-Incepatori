@@ -20,21 +20,41 @@
     ]
   },
   {
-    "objectID": "ifElseBoolean.html",
-    "href": "ifElseBoolean.html",
+    "objectID": "chapters/ifElseBoolean.html",
+    "href": "chapters/ifElseBoolean.html",
     "title": "1  If/ Else și Boolean",
     "section": "",
-    "text": "1.1 Tipul de date Boolean\nMai tineti minte ca in tipurile de date cu care am lucrat pana acum, adica cele pentru numere si siruri de caractere, noi puteam sa memoram orice numar sau orice text pe care ni le imagiam? Ei bine, acum o sa lucram cu un tip de date in care poti stoca doar doua valori: True sau False, adica adevarat sau fals. Doua lucruri importante: valorile acestea nu apar scrise intre ghilimele (cum erau string-urile), si incep mereu cu litera mare.\na = True\nb = False\nprint(a,b)\n\nTrue False\nPoate ca va intrebati de unde vine aceasta denumire de Boolean. Acest tip de date este numit dupa matematicianul britanic George Boole. El a inventat algebra logica ce ii poarta numele si a pus bazele functionarii tuturor calculatoarelor si a limbajelor de programare din ziua de azi.",
+    "text": "1.1 Tipul de date Boolean\nAstazi vom invata calculatorul sa ia decizii singur. Pentru a putea face asta, avem nevoie sa intelegem trei concepte: tipul de date Boolean, operatorii de comparatie, si instructiunile if/ else.\nIn tipurile de date cu care am lucrat pana acum, adica cele pentru numere si siruri de caractere, puteam sa memoram aproape orice numar sau text pe care ni le doream. Ei bine, variabilele de tip Boolean pot stoca doar doua valori: True sau False, adica adevarat sau fals. Doua lucruri importante: valorile acestea nu apar scrise intre ghilimele (cum erau string-urile), si incep mereu cu litera mare.\na =  \"text\"\nb = True\nprint(type(a))\nprint(type(b))\n\n&lt;class 'str'&gt;\n&lt;class 'bool'&gt;\nAsta inseamna ca variabila a este de tip string, iar variabila b este de tip Boolean.\na = True\nb = False\nprint(a,b)\n\nTrue False\nPoate ca va intrebati de unde vine aceasta denumire de Boolean. Acest tip de date este numit dupa matematicianul britanic George Boole. El a inventat algebra logica si a pus bazele functionarii tuturor calculatoarelor si a limbajelor de programare pe care le folosim noi astazi.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>If/ Else și Boolean</span>"
     ]
   },
   {
-    "objectID": "ifElseBoolean.html#operatorii-de-comparare",
-    "href": "ifElseBoolean.html#operatorii-de-comparare",
+    "objectID": "chapters/ifElseBoolean.html#operatorii-de-comparatie",
+    "href": "chapters/ifElseBoolean.html#operatorii-de-comparatie",
     "title": "1  If/ Else și Boolean",
-    "section": "1.2 Operatorii de Comparare (==, !=, <, >)",
-    "text": "1.2 Operatorii de Comparare (==, !=, &lt;, &gt;)\n\n\n\nOperator\nCe înseamnă\n\n\n\n\n==\nEgal cu\n\n\n!=\nNu e egal cu\n\n\n&lt;\nMai mic decât\n\n\n&gt;\nMai mare decât\n\n\n&lt;=\nMai mic sau egal cu\n\n\n&gt;=\nMai mare sau egal cu\n\n\n\nHaideti sa vedem cateva exemple:\n\n1 == 1\n\nTrue\n\n\n\n4 == 32\n\nFalse\n\n\n\n2 != 3\n\nTrue\n\n\n\n2 != 2\n\nFalse\n\n\n\n64 == 64.0\n\nTrue\n\n\n\n'salut' == 'salut'\n\nTrue\n\n\n\n'salut' == 'Salut'\n\nFalse\n\n\n\nTrue == True\n\nTrue\n\n\n\nTrue != False\n\nTrue",
+    "section": "1.2 Operatorii de Comparatie (==, !=, <, >)",
+    "text": "1.2 Operatorii de Comparatie (==, !=, &lt;, &gt;)\nDe multe ori, o decizie implica comparatia dintre doua sau mai multe valori. Pentru asta, avem niste operatori speciali:\n\n\n\nOperator\nCe înseamnă\n\n\n\n\n==\nEgal cu\n\n\n!=\nNu e egal cu\n\n\n&lt;\nMai mic decât\n\n\n&gt;\nMai mare decât\n\n\n&lt;=\nMai mic sau egal cu\n\n\n&gt;=\nMai mare sau egal cu\n\n\n\nHaide sa incepem prin a compara niste numere intre ele (rezultatul va aparea sub bucata de cod):\n\n1 == 1\n\nTrue\n\n\n\n4 == 32\n\nFalse\n\n\n\n2 != 3\n\nTrue\n\n\n\n2 != 2\n\nFalse\n\n\n\n64 == 64.0\n\nTrue\n\n\n\nPutem compara si bucati de text:\n\n'salut' == 'salut'\n\nTrue\n\n\n\n'salut' == 'Salut'\n\nFalse\n\n\n\nPana ca si valorile de adevar pot fi comparate intre ele:\n\nTrue == True\n\nTrue\n\n\n\nTrue != False\n\nTrue\n\n\n\n\n\n\n\n\n\n1.2.1 Diferenta dintre operatorul = si operatorul ==\nAcesti doi operatori sunt usor de confundat, iata ce trebuie sa retineti ca sa nu-i incurcati:\n\nOperatorul = pune valoarea din dreapta in variabila din stanga\nOperatorul == (egal cu) verifica daca doua valori sunt egale\n\nExemplu:\n\na = 2 \nprint(a == 2) # verifica daca valoarea din variabila 'a' este egala cu 2\n\nTrue",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>If/ Else și Boolean</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/ifElseBoolean.html#operatori-booleeni-and-or-not",
+    "href": "chapters/ifElseBoolean.html#operatori-booleeni-and-or-not",
+    "title": "1  If/ Else și Boolean",
+    "section": "1.3 Operatori Booleeni (and, or, not)",
+    "text": "1.3 Operatori Booleeni (and, or, not)\nAvem, de asemenea, la dispozitia noastra si operatorii, and, or, si respectiv, not.\nOperatorul and verifica daca absolut toate expresiile comparate sunt adevarate.\n\n(1 &lt; 5) and (2 &lt; 5)\n\nTrue\n\n\n\n(1 &lt; 5) and (2 &lt; 5) and (10 &lt; 5)\n\nFalse\n\n\nVedem ca e de ajuns ca o singura expresie sa fie falsa ca rezultatul sa fie fals.\nOperatorul or verifica daca cel putin una dintre expresii este adevarata.\n\n(1 == 2) or (2 == 2)\n\nTrue\n\n\nOperatorul not neaga valoarea de adevar. Spre deosebire de and si or, not opereaza pe o singura expresie. Pur si simplu returneaza valoarea opusa.\n\nnot True\n\nFalse",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>If/ Else și Boolean</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/ifElseBoolean.html#if-else",
+    "href": "chapters/ifElseBoolean.html#if-else",
+    "title": "1  If/ Else și Boolean",
+    "section": "1.4 If/ Else",
+    "text": "1.4 If/ Else\nAcum trecem la cea mai importanta parte: structurile de decizie. Noi vrem sa se execute o bucata de cod daca si nu mai daca se indeplineste o conditie, dar cum putem sa facem asta? Pai, cu ajutorul instructiunii if.\nSa zicem ca avem un site si vrem sa verificam daca un utilizator si-a introdus parola corecta.\n\nparola = \"xyz\"\n\nif parola == \"xyz\":\n    print(\"Acces permis.\")\nelse:\n    print(\"Ati introdus parola gresita.\")\n\nAcces permis.\n\n\nIn limbaj natural, am citi aceste linii de cod astfel: “Parola introdusa de utilizator este xyz, daca parola este xyz, atunci se afiseaza pe ecran mesajul Acces permis. Altfel, se afiseaza mesajul Ati introdus parola gresita”.\nDaca expresia urmata de if este adevarata, sau, cu alte cuvinte, conditia a fost indeplinita, atunci toate liniile de cod ce scrise cu alineat imediat sub instructiunea if se vor executa. Acest alineat, in lumea programarii, se numeste indentare. Daca expresia se evalueaza ca fiind falsa, insa, atunci pur si simplu se trece peste liniile de cod indentate aflate imediat sub if.\n\n1.4.1 Structura de decizie if\nStructura de decizie if contine:\n\nCuvantul cheie if\nO conditie (adica o expresie care se evalueaza ca fiind True sau False)\nSemnul de doua puncte (:)\nIncepand cu linia urmatoare, un bloc indentat de cod (numit clauza)\n\n\n\n1.4.2 Structura de decizie else\nStructura de decizie else contine:\n\n\n1.4.3 Structura de decizie elif",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>If/ Else și Boolean</span>"
     ]
