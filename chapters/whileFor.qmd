@@ -1,0 +1,106 @@
+---
+title: Structuri repetitive
+jupyter: python3
+---
+
+---
+
+Pana acum am invatat cum sa scriem programe formate din linii de cod care se executa, de sus in jos, o singura data. Dar in majoritatea programelor utile avem nevoie sa repetam instructiuni. Acest fapt ne permite sa automatizam lucrurile repetitive sau plictisitoare pe care le avem de facut. De exemplu: sa verificam fiecare obiect dintr-o lista, sa-i cerem unui utilizator sa introduca niste date pana cand o face in mod corect, sau sa facem un joc sa mearga pana cand jucatorul pierde.
+
+In acest capitol vom invata urmatoarele concepte:
+
+- Bucla `while` -- repeta un bloc de cod cat timp (while) conditia este adevarata (True)
+- Instructiunea `break` -- opreste executia unei bucle inainte de indeplinirea conditiei 
+- Instructiunea `continue` -- trece peste restul iteratiei curente si sare la urmatoarea
+- Bucla `for` -- repeta un bloc de cod de un numar specific de ori, sau pentru fiecare obiect dintr-o lista.
+- Functia `range()` -- genereaza o secventa de numere. De obicei se foloseste pentru a specifica de cate ori sa se repete o bucla `for`
+
+## Bucle while
+
+Putem face un bloc de cod sa se execute de mai multe ori folosind instructiunea `while`. Codul din clauza `while` va continua sa se executa cat timp conditia este adevarata (True). 
+
+Instructiunea `while` este compusa din:
+
+1. Cuvantul cheie `while`
+2. O conditie (adica o expresie care se evalueaza ca True sau False)
+3. Doua puncte :
+4. Incepand cu linia urmatoare, un bloc indentat de cod (numit si clauza while)
+
+Incepem cu ce stim, si apoi vedem ca nu e asa de mare diferenta, ca sa intelegem mai usor.
+
+```{python}
+numar = 0
+if numar < 3:
+    print(numar)
+    numar += 1
+```
+
+```{python}
+i = 0
+while i < 3:
+    print("Michael Jackson")
+    i = i + 1
+```
+
+
+--- 
+Un program enervant
+
+```{python}
+#| eval: false
+name = ""
+while name != "cum te cheama":
+    print("Te rog scrie cum te cheama")
+    name = input()
+print("Mersi!")
+```
+
+
+```
+Te rog scrie cum te cheama
+Rob
+Te rog scrie cum te cheama
+Robert
+Te rog scrie cum te cheama
+???????
+Te rog scrie cum te cheama
+cum te cheama
+Mersi!
+```
+
+---
+
+## Instructiunea break
+
+```{python}
+for number in range(10):
+    if number == 4:
+        break
+    print(number)
+```
+
+
+## Instructiunea continue
+
+```{python}
+for number in range(10):
+    if number % 2 == 0:
+        continue
+    print(number)
+```
+
+## Bucle for
+```{python}
+celebritati = ["Michael Jackson", "Selly", "Maria"]
+for celebritate in celebritati:
+    print(celebritate)
+```
+
+Afiseaza pe ecran fiecare celebritate din lista, cate una la fiecare iteratie.
+
+## Functia range()
+
+```{python}
+for i in range (5):
+    print(i)
+```

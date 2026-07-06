@@ -1,10 +1,10 @@
 # Prefață {.unnumbered}
 
 ## Capitole
-1. [If/ Else și Boolean](chapters/ifElseBoolean.qmd)
+1. [Structuri de decizie](chapters/ifElseBoolean.qmd)
+2. [Structuri repetitive](chapters/whileFor.qmd)
 
 
 Această carte a fost realizată folosind Quarto.
 
 Mai multe despre Quarto aici: <https://quarto.org/docs/books>.
-
