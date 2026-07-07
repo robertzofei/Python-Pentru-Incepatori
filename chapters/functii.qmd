@@ -1,0 +1,23 @@
+---
+title: Functii
+jupyter: python3
+---
+
+---
+
+Am folosit pana acum functiile `print()`, `len()`, `input()` si multe altele. Aceste functii sunt deja incluse in Python, dar stiati ca putem sa ne scriem propriile noastre functii?
+
+Ce vom invata in acest capitol:
+
+- instructiunea `def`
+- instructiunea `return`
+- valoarea `none`
+- Variabile locale si variabile globale
+
+## Instructiunea def
+
+## Instructiunea return
+
+## Valoarea none
+
+## Variabile locale si variabile globale

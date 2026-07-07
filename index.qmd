@@ -1,8 +1,9 @@
 # Prefață {.unnumbered}
 
 ## Capitole
-1. [Structuri de decizie](chapters/ifElseBoolean.qmd)
+1. [Structuri de decizie](chapters/ifElse.qmd)
 2. [Structuri repetitive](chapters/whileFor.qmd)
+3. [Functii](chapters/functii.qmd)
 
 
 Această carte a fost realizată folosind Quarto.

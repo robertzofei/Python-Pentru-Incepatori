@@ -17,16 +17,9 @@ In acest capitol vom invata urmatoarele concepte:
 
 ## Bucle while
 
-Putem face un bloc de cod sa se execute de mai multe ori folosind instructiunea `while`. Codul din clauza `while` va continua sa se executa cat timp conditia este adevarata (True). 
+Putem face un bloc de cod sa se execute de mai multe ori folosind instructiunea `while`. Vom lua doua bucati de cod: una care contine o instructiune `if`, si alta care contine o instructiune `while`.
 
-Instructiunea `while` este compusa din:
-
-1. Cuvantul cheie `while`
-2. O conditie (adica o expresie care se evalueaza ca True sau False)
-3. Doua puncte :
-4. Incepand cu linia urmatoare, un bloc indentat de cod (numit si clauza while)
-
-Incepem cu ce stim, si apoi vedem ca nu e asa de mare diferenta, ca sa intelegem mai usor.
+Ne uitam la doua bucati de cod.
 
 ```{python}
 numar = 0
@@ -36,12 +29,26 @@ if numar < 3:
 ```
 
 ```{python}
-i = 0
-while i < 3:
-    print("Michael Jackson")
-    i = i + 1
+numar = 0
+while numar < 3:
+    print(numar)
+    numar += 1
 ```
 
+Observam in scurt timp ca cele doua bucati de cod arata aproape identic, insa diferenta este la felul in care se comporta.
+
+Codul din clauza `while` va continua sa se execute cat timp conditia este adevarata (True).
+
+ 
+
+Instructiunea `while` este compusa din:
+
+1. Cuvantul cheie `while`
+2. O conditie (adica o expresie care se evalueaza ca True sau False)
+3. Doua puncte :
+4. Incepand cu linia urmatoare, un bloc indentat de cod (numit si clauza while)
+
+Incepem cu ce stim, si apoi vedem ca nu e asa de mare diferenta, ca sa intelegem mai usor.
 
 --- 
 Un program enervant
@@ -103,4 +110,20 @@ Afiseaza pe ecran fiecare celebritate din lista, cate una la fiecare iteratie.
 ```{python}
 for i in range (5):
     print(i)
+```
+
+## Switch case
+
+```{python}
+value = 2
+match value:
+    case 1:
+        result = "one"
+    case 2:
+        result = "two"
+    case 3:
+        result = "three"
+    case _:
+        result = "unknown"
+print(result)
 ```

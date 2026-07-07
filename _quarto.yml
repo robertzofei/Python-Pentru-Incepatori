@@ -10,8 +10,9 @@ book:
   date: "5/3/2026"
   chapters:
     - index.qmd
-    - chapters/ifElseBoolean.qmd
+    - chapters/ifElse.qmd
     - chapters/whileFor.qmd
+    - chapters/functii.qmd
     - chapters/references.qmd
 
 bibliography: chapters/references.bib
