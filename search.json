@@ -14,7 +14,7 @@
     "href": "index.html#capitole",
     "title": "Python pentru Începatori",
     "section": "Capitole",
-    "text": "Capitole\n\nStructuri de decizie\nStructuri repetitive\n\nAceastă carte a fost realizată folosind Quarto.\nMai multe despre Quarto aici: https://quarto.org/docs/books.",
+    "text": "Capitole\n\nStructuri de decizie\nStructuri repetitive\nFunctii\n\nAceastă carte a fost realizată folosind Quarto.\nMai multe despre Quarto aici: https://quarto.org/docs/books.",
     "crumbs": [
       "Prefață"
     ]
@@ -64,7 +64,7 @@
     "href": "chapters/whileFor.html",
     "title": "2  Structuri repetitive",
     "section": "",
-    "text": "2.1 Bucle while\nPana acum am invatat cum sa scriem programe formate din linii de cod care se executa, de sus in jos, o singura data. Dar in majoritatea programelor utile avem nevoie sa repetam instructiuni. Acest fapt ne permite sa automatizam lucrurile repetitive sau plictisitoare pe care le avem de facut. De exemplu: sa verificam fiecare obiect dintr-o lista, sa-i cerem unui utilizator sa introduca niste date pana cand o face in mod corect, sau sa facem un joc sa mearga pana cand jucatorul pierde.\nIn acest capitol vom invata urmatoarele concepte:\nPutem face un bloc de cod sa se execute de mai multe ori folosind instructiunea while. Codul din clauza while va continua sa se executa cat timp conditia este adevarata (True).\nInstructiunea while este compusa din:\nIncepem cu ce stim, si apoi vedem ca nu e asa de mare diferenta, ca sa intelegem mai usor.\nnumar = 0\nif numar &lt; 3:\n    print(numar)\n    numar += 1\n\n0\ni = 0\nwhile i &lt; 3:\n    print(\"Michael Jackson\")\n    i = i + 1\n\nMichael Jackson\nMichael Jackson\nMichael Jackson\nUn program enervant\nname = \"\"\nwhile name != \"cum te cheama\":\n    print(\"Te rog scrie cum te cheama\")\n    name = input()\nprint(\"Mersi!\")",
+    "text": "2.1 Bucle while\nPana acum am invatat cum sa scriem programe formate din linii de cod care se executa, de sus in jos, o singura data. Dar in majoritatea programelor utile avem nevoie sa repetam instructiuni. Acest fapt ne permite sa automatizam lucrurile repetitive sau plictisitoare pe care le avem de facut. De exemplu: sa verificam fiecare obiect dintr-o lista, sa-i cerem unui utilizator sa introduca niste date pana cand o face in mod corect, sau sa facem un joc sa mearga pana cand jucatorul pierde.\nIn acest capitol vom invata urmatoarele concepte:\nBuclele while, (in engleza while loops) permit executarea in mod repetat a unei secvente de linii de cod cat timp se respecta o anumita conditie.\nNe uitam la aceste doua programe si nu dureaza mult sa observam ca arata aproape identic: singura diferenta dintre ele este ca in primul avem instructiunea if, iar in celalalt avem instructiunea while.\nnumar = 0\nif numar &lt; 3:\n    print(numar)\n    numar += 1\n\n0\nnumar = 0\nwhile numar &lt; 3:\n    print(numar)\n    numar += 1\n\n0\n1\n2\nAvem o variabila numita numar in care stocam valoarea 0. Apoi urmeaza conditia: daca, numar este strict mai mic decat 3, atunci se afiseaza pe ecran numarul si ii crestem valoarea acestuia cu 1, adica din 0 devine 0 + 1 = 1. In continuare, insa, apare diferenta:\nInstructiunea while este compusa din:\nIata un program enervant, dar care ne ajuta sa intelegem mai bine cum functioneaza buclele while.\nname = \"\"\nwhile name != \"cum te cheama\":\n    print(\"Te rog scrie cum te cheama\")\n    name = input()\nprint(\"Mersi!\")",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Structuri repetitive</span>"
     ]
@@ -74,7 +74,7 @@
     "href": "chapters/whileFor.html#bucle-while",
     "title": "2  Structuri repetitive",
     "section": "",
-    "text": "Cuvantul cheie while\nO conditie (adica o expresie care se evalueaza ca True sau False)\nDoua puncte :\nIncepand cu linia urmatoare, un bloc indentat de cod (numit si clauza while)\n\n\n\n\n\n\n\nTe rog scrie cum te cheama\nRob\nTe rog scrie cum te cheama\nRobert\nTe rog scrie cum te cheama\n???????\nTe rog scrie cum te cheama\ncum te cheama\nMersi!",
+    "text": "Daca conditia este respectata, clauza if (adica blocul de cod indentat aflat imediat sub instructiunea if) se executa o singura data .\nCodul din clauza while va continua sa se execute cat timp conditia este adevarata (True), mai exact cat timp numar este strict mai mic decat 3.\n\n\n\n\nCuvantul cheie while\nO conditie (adica o expresie care se evalueaza ca True sau False)\nDoua puncte :\nIncepand cu linia urmatoare, un bloc indentat de cod (numit si clauza while)\n\n\n\n\nTe rog scrie cum te cheama\nRob\nTe rog scrie cum te cheama\nRobert\nTe rog scrie cum te cheama\n???????\nTe rog scrie cum te cheama\ncum te cheama\nMersi!",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Structuri repetitive</span>"
     ]
@@ -117,6 +117,56 @@
     "text": "2.5 Functia range()\n\nfor i in range (5):\n    print(i)\n\n0\n1\n2\n3\n4",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Structuri repetitive</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/whileFor.html#switch-case",
+    "href": "chapters/whileFor.html#switch-case",
+    "title": "2  Structuri repetitive",
+    "section": "2.6 Switch case",
+    "text": "2.6 Switch case\n\nvalue = 2\nmatch value:\n    case 1:\n        result = \"one\"\n    case 2:\n        result = \"two\"\n    case 3:\n        result = \"three\"\n    case _:\n        result = \"unknown\"\nprint(result)\n\ntwo",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Structuri repetitive</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/functii.html",
+    "href": "chapters/functii.html",
+    "title": "3  Functii",
+    "section": "",
+    "text": "3.1 Instructiunea def\nAm folosit pana acum functiile print(), len(), input() si multe altele. Aceste functii sunt deja incluse in Python, dar stiati ca putem sa ne scriem propriile noastre functii?\nCe vom invata in acest capitol:",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Functii</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/functii.html#instructiunea-return",
+    "href": "chapters/functii.html#instructiunea-return",
+    "title": "3  Functii",
+    "section": "3.2 Instructiunea return",
+    "text": "3.2 Instructiunea return",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Functii</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/functii.html#valoarea-none",
+    "href": "chapters/functii.html#valoarea-none",
+    "title": "3  Functii",
+    "section": "3.3 Valoarea none",
+    "text": "3.3 Valoarea none",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Functii</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/functii.html#variabile-locale-si-variabile-globale",
+    "href": "chapters/functii.html#variabile-locale-si-variabile-globale",
+    "title": "3  Functii",
+    "section": "3.4 Variabile locale si variabile globale",
+    "text": "3.4 Variabile locale si variabile globale",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Functii</span>"
     ]
   }
 ]
