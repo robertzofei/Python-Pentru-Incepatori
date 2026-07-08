@@ -9,17 +9,17 @@ Pana acum am invatat cum sa scriem programe formate din linii de cod care se exe
 
 In acest capitol vom invata urmatoarele concepte:
 
-- Bucla `while` -- repeta un bloc de cod cat timp (while) conditia este adevarata (True)
-- Instructiunea `break` -- opreste executia unei bucle inainte de indeplinirea conditiei 
-- Instructiunea `continue` -- trece peste restul iteratiei curente si sare la urmatoarea
+- Bucla `while` -- repeta un bloc de cod cat timp conditia este adevarata (True).
+- Instructiunea `break` -- opreste executia unei bucle inainte de indeplinirea conditiei.
+- Instructiunea `continue` -- trece peste restul iteratiei curente si sare la urmatoarea.
 - Bucla `for` -- repeta un bloc de cod de un numar specific de ori, sau pentru fiecare obiect dintr-o lista.
-- Functia `range()` -- genereaza o secventa de numere. De obicei se foloseste pentru a specifica de cate ori sa se repete o bucla `for`
+- Functia `range()` -- genereaza o secventa de numere. De obicei se foloseste pentru a se specifica de cate ori se repeta o bucla `for`.
 
 ## Bucle while
 
-Putem face un bloc de cod sa se execute de mai multe ori folosind instructiunea `while`. Vom lua doua bucati de cod: una care contine o instructiune `if`, si alta care contine o instructiune `while`.
+Buclele `while`, (in engleza while loops) permit executarea in mod repetat a unei secvente de linii de cod cat timp se respecta o anumita conditie.
 
-Ne uitam la doua bucati de cod.
+Ne uitam la aceste doua programe si nu dureaza mult sa observam ca arata aproape identic: singura diferenta dintre ele este ca in primul avem instructiunea `if`, iar in celalalt avem instructiunea `while`.
 
 ```{python}
 numar = 0
@@ -35,23 +35,26 @@ while numar < 3:
     numar += 1
 ```
 
-Observam in scurt timp ca cele doua bucati de cod arata aproape identic, insa diferenta este la felul in care se comporta.
+***
 
-Codul din clauza `while` va continua sa se execute cat timp conditia este adevarata (True).
+Avem o variabila numita `numar` in care stocam valoarea 0. Apoi urmeaza conditia: daca, `numar` este strict mai mic decat 3, atunci se afiseaza pe ecran numarul si ii crestem valoarea acestuia cu 1, adica din 0 devine 0 + 1 = 1. In continuare, insa,  apare diferenta:
 
- 
+- Daca conditia este respectata, clauza `if` (adica blocul de cod indentat aflat imediat sub instructiunea `if`) se executa o singura data .
+
+- Codul din clauza `while` va continua sa se execute cat timp conditia este adevarata (True), mai exact cat timp `numar` este strict mai mic decat 3.
+
+***
 
 Instructiunea `while` este compusa din:
 
 1. Cuvantul cheie `while`
 2. O conditie (adica o expresie care se evalueaza ca True sau False)
-3. Doua puncte :
+3. Doua puncte `:`
 4. Incepand cu linia urmatoare, un bloc indentat de cod (numit si clauza while)
 
-Incepem cu ce stim, si apoi vedem ca nu e asa de mare diferenta, ca sa intelegem mai usor.
+*** 
 
---- 
-Un program enervant
+Iata un program enervant, dar care ne ajuta sa intelegem mai bine cum functioneaza buclele `while`.
 
 ```{python}
 #| eval: false
@@ -75,7 +78,7 @@ cum te cheama
 Mersi!
 ```
 
----
+***
 
 ## Instructiunea break
 
