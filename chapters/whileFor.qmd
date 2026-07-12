@@ -46,7 +46,7 @@ Avem o variabila numita `numar` in care stocam valoarea 0. Apoi urmeaza conditia
 
 - Codul din clauza `while` va continua sa se execute cat timp conditia este adevarata (True), mai exact cat timp `numar` este strict mai mic decat 3.
 
-***
+
 
 Iata un program enervant, dar care ne ajuta sa intelegem mai bine cum functioneaza buclele `while`. 
 
@@ -87,6 +87,14 @@ Instructiunea `while` este compusa din:
 3. Doua puncte `:`
 4. Incepand cu linia urmatoare, un bloc indentat de cod (numit si clauza while)
 
+### Bucla infinita (Infinite Loop)
+
+```{python}
+#| eval: false
+while True:
+    print("Salutare fratilor!")
+```
+
 ## Instructiunea break
 
 Exista o scurtatura care face ca bucla sa se opreasca din executie mai devreme, iar aceasta se numeste `break`. Atunci cand executia ajunge la instructiunea `break`, programul iese imediat din bucla respectiva. 
@@ -110,6 +118,66 @@ Iarasi avem un program care numara. Ar trebui sa numere de la 1 la 10 dar observ
 
 Acest program ar fi trebuit sa numere de la 1 pana la 10. Dar vedem ca este impusa conditia ca programul sa se opreasca daca numarul este egal cu 4.
 
+***
+
+Un script de login care ne cere parola cat timp aceasta este gresita.
+
+```{python}
+#| eval: false
+PAROLA_CORECTA = "Andrei_123"
+
+while True:
+    parola_introdusa = input("Introdu parola:")
+
+    if parola_introdusa == PAROLA_CORECTA:
+        print("Acces permis!")
+        break
+    else:
+        print("Parola incorecta!")
+
+print("Programul continua...")
+```
+
+Introdu parola:jony
+
+Parola incorecta!
+
+Introdu parola:23
+
+Parola incorecta!
+
+Introdu parola:mamaie
+
+Parola incorecta!
+
+Introdu parola:Andrei_123
+
+Acces permis!
+
+Programul continua...
+
+***
+
+while True creaaza din start o bulca infinita controlata. Programul porneste executia buclei fara sa verifice nicio conditie prealabila.
+***
+
+```{python}
+cnp_cautat = "1900512123456"
+baza_date_clienti = ["1890101001122", 
+                     "7910303445566", 
+                     "1900512123456", 
+                     "5010202998877"]
+
+for cnp in baza_date_clienti:
+    print(f"Scanez: {cnp}")
+    
+    if cnp == cnp_cautat:
+        print("Client găsit! Opresc scanarea bazei de date.")
+        break
+
+print("Se executa restul programului...")
+```
+
 ## Instructiunea continue
 
 Instructiunile `continue`, asemenea celor `break`, sunt folosite in interiorul buclelor. Cand executia unui program ajunge la o instructiune `continue`, aceasta se intoarce inapoi la inceputul buclei si evalueaza din nou conditia.
@@ -121,12 +189,19 @@ for numar in range(10):
     print(numar)
 ```
 
-### Bucla infinita (Infinite Loop)
-
 ```{python}
-#| eval: false
-while True:
-    print("Salutare fratilor!")
+facturi = [150.5, 0, 1200.75]
+total_incasari = 0
+
+for factura in facturi:
+    if factura == 0:
+        print("Factura anulata (0 RON). Dam skip.")
+        continue
+
+    print(f"Procesez plata pentru: {factura} RON")
+    total_incasari += factura
+
+print(f"Total procesat: {total_incasari} RON")
 ```
 
 

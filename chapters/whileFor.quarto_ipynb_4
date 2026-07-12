@@ -1,0 +1,365 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "35fc73c3",
+   "metadata": {},
+   "source": [
+    "---\n",
+    "title: Structuri repetitive\n",
+    "jupyter: python3\n",
+    "format:\n",
+    "  html:\n",
+    "    code-line-numars: true\n",
+    "---\n",
+    "\n",
+    "***\n",
+    "\n",
+    "Pana acum am invatat cum sa scriem programe formate din linii de cod care se executa, de sus in jos, o singura data. Dar in majoritatea programelor utile avem nevoie sa repetam instructiuni. Acest fapt ne permite sa automatizam lucrurile repetitive sau plictisitoare pe care le avem de facut. De exemplu: sa verificam fiecare obiect dintr-o lista, sa-i cerem unui utilizator sa introduca niste date pana cand o face in mod corect, sau sa facem un joc sa mearga pana cand jucatorul pierde.\n",
+    "\n",
+    "In acest capitol vom invata urmatoarele concepte:\n",
+    "\n",
+    "- Bucla `while` -- repeta un bloc de cod cat timp conditia este adevarata (True).\n",
+    "- Instructiunea `break` -- opreste executia unei bucle inainte de indeplinirea conditiei.\n",
+    "- Instructiunea `continue` -- trece peste restul iteratiei curente si sare la urmatoarea.\n",
+    "- Bucla `for` -- repeta un bloc de cod de un numar specific de ori, sau pentru fiecare obiect dintr-o lista.\n",
+    "- Functia `range()` -- genereaza o secventa de numere. De obicei se foloseste pentru a se specifica de cate ori se repeta o bucla `for`.\n",
+    "\n",
+    "## Bucle while\n",
+    "\n",
+    "Buclele `while`, (in engleza while loops) permit executarea in mod repetat a unei secvente de linii de cod cat timp se respecta o anumita conditie.\n",
+    "\n",
+    "Ne uitam la aceste doua programe si nu dureaza mult sa observam ca arata aproape identic: singura diferenta dintre ele este ca in primul avem instructiunea `if`, iar in celalalt avem instructiunea `while`."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "6c824592",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0\n"
+     ]
+    }
+   ],
+   "source": [
+    "numar = 0\n",
+    "if numar < 3:\n",
+    "    print(numar)\n",
+    "    numar += 1"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "37326a57",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0\n",
+      "1\n",
+      "2\n"
+     ]
+    }
+   ],
+   "source": [
+    "numar = 0\n",
+    "while numar < 3:\n",
+    "    print(numar)\n",
+    "    numar += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "a2ea0441",
+   "metadata": {},
+   "source": [
+    "***\n",
+    "\n",
+    "Avem o variabila numita `numar` in care stocam valoarea 0. Apoi urmeaza conditia: daca, `numar` este strict mai mic decat 3, atunci se afiseaza pe ecran numarul si ii crestem valoarea acestuia cu 1, adica din 0 devine 0 + 1 = 1. In continuare, insa,  apare diferenta:\n",
+    "\n",
+    "- Daca conditia este respectata, clauza `if` (adica blocul de cod indentat aflat imediat sub instructiunea `if`) se executa o singura data .\n",
+    "\n",
+    "- Codul din clauza `while` va continua sa se execute cat timp conditia este adevarata (True), mai exact cat timp `numar` este strict mai mic decat 3.\n",
+    "\n",
+    "***\n",
+    "\n",
+    "Iata un program enervant, dar care ne ajuta sa intelegem mai bine cum functioneaza buclele `while`. \n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "bc9b705e",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#| eval: false\n",
+    "name = \"\"\n",
+    "while name != \"cum te cheama\":\n",
+    "    print(\"Te rog scrie cum te cheama\")\n",
+    "    name = input()\n",
+    "print(\"Mersi!\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "acb988a8",
+   "metadata": {},
+   "source": [
+    "```\n",
+    "Te rog scrie cum te cheama\n",
+    "Rob\n",
+    "Te rog scrie cum te cheama\n",
+    "Robert\n",
+    "Te rog scrie cum te cheama\n",
+    "???????\n",
+    "Te rog scrie cum te cheama\n",
+    "cum te cheama\n",
+    "Mersi!\n",
+    "```\n",
+    "\n",
+    "***\n",
+    "\n",
+    "Observam in prima linie de cod `1` ca memoram un string gol in variabila `name`. Sa ai un string gol e ca si cum ai deschide un proiect nou in Word si inca n-ai apucat sa scrii nimic. Stii doar ca urmeaza sa fie cuvinte acolo. La fel este si aceasta variabila -- calculatorul stie ca este de tip String, dar nu contine nimic.\n",
+    "\n",
+    "***\n",
+    "\n",
+    "\n",
+    "Instructiunea `while` este compusa din:\n",
+    "\n",
+    "1. Cuvantul cheie `while`\n",
+    "2. O conditie (adica o expresie care se evalueaza ca True sau False)\n",
+    "3. Doua puncte `:`\n",
+    "4. Incepand cu linia urmatoare, un bloc indentat de cod (numit si clauza while)\n",
+    "\n",
+    "### Bucla infinita (Infinite Loop)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "e1d422f7",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "#| eval: false\n",
+    "while True:\n",
+    "    print(\"Salutare fratilor!\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "cc170226",
+   "metadata": {},
+   "source": [
+    "## Instructiunea break\n",
+    "\n",
+    "Exista o scurtatura care face ca bucla sa se opreasca din executie mai devreme, iar aceasta se numeste `break`. Atunci cand executia ajunge la instructiunea `break`, programul iese imediat din bucla respectiva. \n",
+    "\n",
+    "**Atentie!** Se opreste doar bucla, nu si restul programului."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "4c9efb70",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Incepe numaratoarea\n",
+      "1\n",
+      "2\n",
+      "3\n",
+      "4\n",
+      "Numaratoarea s-a incheiat\n"
+     ]
+    }
+   ],
+   "source": [
+    "numar = 0\n",
+    "print(\"Incepe numaratoarea\")\n",
+    "while numar < 11:\n",
+    "    if numar == 4:\n",
+    "        break\n",
+    "    numar += 1\n",
+    "    print(numar)\n",
+    "print(\"Numaratoarea s-a incheiat\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "e9d45ba4",
+   "metadata": {},
+   "source": [
+    "***\n",
+    "\n",
+    "Iarasi avem un program care numara. Ar trebui sa numere de la 1 la 10 dar observam acel `if` de la linia `4` care se executa sa verifice daca numarul este egal cu 4. Daca conditia este True, se executa instructiunea `break`, iar bucla `while` se opreste. La final, se trece mai departe la ultima linie de cod `8`. Altfel, se trece peste clauza `if` si executia sare inapoi la inceputul buclei `while` pentru a verifica din nou conditia `numar < 11`.\n",
+    "\n",
+    "Acest program ar fi trebuit sa numere de la 1 pana la 10. Dar vedem ca este impusa conditia ca programul sa se opreasca daca numarul este egal cu 4.\n",
+    "\n",
+    "\n",
+    "\n",
+    "## Instructiunea continue\n",
+    "\n",
+    "Instructiunile `continue`, asemenea celor `break`, sunt folosite in interiorul buclelor. Cand executia unui program ajunge la o instructiune `continue`, aceasta se intoarce inapoi la inceputul buclei si evalueaza din nou conditia."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "b8ed1a94",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "1\n",
+      "3\n",
+      "5\n",
+      "7\n",
+      "9\n"
+     ]
+    }
+   ],
+   "source": [
+    "for numar in range(10):\n",
+    "    if numar % 2 == 0:\n",
+    "        continue\n",
+    "    print(numar)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "2afc4f75",
+   "metadata": {},
+   "source": [
+    "## Bucle for"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "e397ea8e",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Michael Jackson\n",
+      "Selly\n",
+      "Maria\n"
+     ]
+    }
+   ],
+   "source": [
+    "celebritati = [\"Michael Jackson\", \"Selly\", \"Maria\"]\n",
+    "for celebritate in celebritati:\n",
+    "    print(celebritate)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "24c854ef",
+   "metadata": {},
+   "source": [
+    "Afiseaza pe ecran fiecare celebritate din lista, cate una la fiecare iteratie.\n",
+    "\n",
+    "## Functia range()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "id": "84fd331b",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0\n",
+      "1\n",
+      "2\n",
+      "3\n",
+      "4\n"
+     ]
+    }
+   ],
+   "source": [
+    "for i in range (5):\n",
+    "    print(i)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "3aee98b3",
+   "metadata": {},
+   "source": [
+    "## Switch case"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "id": "cb37e53a",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "two\n"
+     ]
+    }
+   ],
+   "source": [
+    "value = 2\n",
+    "match value:\n",
+    "    case 1:\n",
+    "        result = \"one\"\n",
+    "    case 2:\n",
+    "        result = \"two\"\n",
+    "    case 3:\n",
+    "        result = \"three\"\n",
+    "    case _:\n",
+    "        result = \"unknown\"\n",
+    "print(result)"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3",
+   "path": "C:\\Users\\rzofe\\AppData\\Local\\Python\\pythoncore-3.14-64\\share\\jupyter\\kernels\\python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.14.6"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
