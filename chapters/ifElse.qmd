@@ -9,6 +9,7 @@ Astazi vom invata calculatorul sa ia decizii singur. Pentru a putea face asta, a
 In tipurile de date cu care am lucrat pana acum, adica cele pentru numere si siruri de caractere, puteam sa memoram aproape orice numar sau text pe care ni le doream. Ei bine, variabilele de tip Boolean pot stoca doar doua valori: True sau False, adica adevarat sau fals. Doua lucruri importante: valorile acestea nu apar scrise intre ghilimele (cum erau string-urile), si incep mereu cu litera mare.
 
 ```{python}
+#| code-line-numbers: true
 a =  "text"
 b = True
 print(type(a))
@@ -18,6 +19,7 @@ print(type(b))
 Asta inseamna ca variabila **a** este de tip string, iar variabila **b** este de tip Boolean.
 
 ```{python}
+#| code-line-numbers: true
 a = True
 b = False
 print(a,b)
@@ -84,6 +86,7 @@ True != False
 ```
 
 ```{pyodide}
+#| code-line-numbers: true
 a = 1
 print(a)
 ```
@@ -98,6 +101,7 @@ Acesti doi operatori sunt usor de confundat, iata ce trebuie sa retineti ca sa n
 Exemplu:
 
 ```{python}
+#| code-line-numbers: true
 a = 2 
 print(a == 2) # verifica daca valoarea din variabila 'a' este egala cu 2
 ```
@@ -138,6 +142,7 @@ Vrem sa se execute o bucata de cod daca si nu mai daca se indeplineste o conditi
 Sa zicem ca avem un program care verifica daca numele cuiva este "Alin". Ne prefacem ca cineva a introdus mai devreme o valoare in variabila *nume*.
 
 ```{python}
+#| code-line-numbers: true
 nume = "Alin"
 if nume == "Alin":
     print("Salut, Alin!")
@@ -163,6 +168,7 @@ Instructiunea **if** contine:
 Sa zicem ca avem un site si vrem sa verificam daca un utilizator si-a introdus parola corecta.
 
 ```{python}
+#| code-line-numbers: true
 parola = "xyz"
 
 if parola == "xyz": 
@@ -190,6 +196,7 @@ Ar putea exista situatia in care trebuie sa verificam mai multe cazuri. In aceas
 Sa luam un exemplu in care verificam varsta cuiva:
 
 ```{python}
+#| code-line-numbers: true
 varsta = 1520 # de ani
 
 if varsta < 18:
@@ -203,6 +210,7 @@ elif varsta > 18:
 Observati ca ordinea instructiunilor **elif** din acest exemplu este una avantajoasa. Daca inversam cele doua **elif**-uri, programul ar fi putut oferi raspunsuri gresite cand valoarea varstei depasea 1000. Ar fi spus ca o persoana de 1001 de ani este adult. Asta se intampla pentru ca expresiile se evalueaza pe rand de sus in jos. Odata ce una este corecta, se executa codul din clauza instructiunii respective, iar restul nu se mai verifica. De asemenea, bineinteles ca nu exista persoane de 1000 de ani sau vampiri (mai stii?).
 
 ```{python}
+#| code-line-numbers: true
 # Varianta gresita
 varsta = 1001 # de ani
 
