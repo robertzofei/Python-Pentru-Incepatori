@@ -46,17 +46,16 @@ Avem o variabila numita `numar` in care stocam valoarea 0. Apoi urmeaza conditia
 
 - Codul din clauza `while` va continua sa se execute cat timp conditia este adevarata (True), mai exact cat timp `numar` este strict mai mic decat 3.
 
-
+***
 
 Iata un program enervant, dar care ne ajuta sa intelegem mai bine cum functioneaza buclele `while`. 
 
-
 ```{python}
 #| eval: false
-name = ""
-while name != "cum te cheama":
+nume = ""
+while nume != "cum te cheama":
     print("Te rog scrie cum te cheama")
-    name = input()
+    nume = input()
 print("Mersi!")
 ```
 
@@ -75,10 +74,9 @@ Mersi!
 
 ***
 
-Observam in prima linie de cod `1` ca memoram un string gol in variabila `name`. Sa ai un string gol e ca si cum ai deschide un proiect nou in Word si inca n-ai apucat sa scrii nimic. Stii doar ca urmeaza sa fie cuvinte acolo. La fel este si aceasta variabila -- calculatorul stie ca este de tip String, dar nu contine nimic.
+Observam in prima linie de cod `1` ca memoram un string gol in variabila `nume`. Sa ai un string gol e ca si cum ai deschide un proiect nou in Word si inca n-ai apucat sa scrii nimic. Stii doar ca urmeaza sa fie cuvinte acolo. La fel este si aceasta variabila -- calculatorul stie ca este de tip String, dar nu contine nimic.
 
 ***
-
 
 Instructiunea `while` este compusa din:
 
@@ -87,7 +85,25 @@ Instructiunea `while` este compusa din:
 3. Doua puncte `:`
 4. Incepand cu linia urmatoare, un bloc indentat de cod (numit si clauza while)
 
+***
+
+Forma 1:
+
+```{python}
+lista = [64, 32, 4, 1, 0, -8, 100]
+i = 0
+
+while lista[i] > 0:
+    print(f"Numar valid: {lista[i]}")
+    i += 1
+
+print("Bucla while s-a oprit pentru ca"
+      " am intalnit o valoare <= 0")
+```
+
 ### Bucla infinita (Infinite Loop)
+
+Forma 2:
 
 ```{python}
 #| eval: false
@@ -96,6 +112,9 @@ while True:
 ```
 
 ## Instructiunea break
+
+Forma 3:
+
 
 Exista o scurtatura care face ca bucla sa se opreasca din executie mai devreme, iar aceasta se numeste `break`. Atunci cand executia ajunge la instructiunea `break`, programul iese imediat din bucla respectiva. 
 
@@ -117,6 +136,23 @@ print("Numaratoarea s-a incheiat")
 Iarasi avem un program care numara. Ar trebui sa numere de la 1 la 10 dar observam acel `if` de la linia `4` care se executa sa verifice daca numarul este egal cu 4. Daca conditia este True, se executa instructiunea `break`, iar bucla `while` se opreste. La final, se trece mai departe la ultima linie de cod `8`. Altfel, se trece peste clauza `if` si executia sare inapoi la inceputul buclei `while` pentru a verifica din nou conditia `numar < 11`.
 
 Acest program ar fi trebuit sa numere de la 1 pana la 10. Dar vedem ca este impusa conditia ca programul sa se opreasca daca numarul este egal cu 4.
+
+***
+
+```{python}
+lista = [16, 4, 1, 0, -2, -4, 100]
+
+suma = 0
+i = 0
+
+while True:
+    suma += lista[i]
+    i += 1
+    if lista[i] == 0:
+        break
+
+print(suma)
+```
 
 ***
 
@@ -146,10 +182,6 @@ Introdu parola:23
 
 Parola incorecta!
 
-Introdu parola:mamaie
-
-Parola incorecta!
-
 Introdu parola:Andrei_123
 
 Acces permis!
@@ -158,25 +190,11 @@ Programul continua...
 
 ***
 
-while True creaaza din start o bulca infinita controlata. Programul porneste executia buclei fara sa verifice nicio conditie prealabila.
+while True creeaza din start o bucla infinita controlata. Programul porneste executia buclei fara sa verifice nicio conditie prealabila.
+
 ***
 
-```{python}
-cnp_cautat = "1900512123456"
-baza_date_clienti = ["1890101001122", 
-                     "7910303445566", 
-                     "1900512123456", 
-                     "5010202998877"]
 
-for cnp in baza_date_clienti:
-    print(f"Scanez: {cnp}")
-    
-    if cnp == cnp_cautat:
-        print("Client găsit! Opresc scanarea bazei de date.")
-        break
-
-print("Se executa restul programului...")
-```
 
 ## Instructiunea continue
 
@@ -204,25 +222,66 @@ for factura in facturi:
 print(f"Total procesat: {total_incasari} RON")
 ```
 
+***
 
 ## Bucle for
 ```{python}
-celebritati = ["Michael Jackson", "Selly", "Maria"]
-for celebritate in celebritati:
-    print(celebritate)
+lista = ["Michael Jackson", "Selly", "Maria"]
+for membru in lista:
+    print(membru)
 ```
 
-Afiseaza pe ecran fiecare celebritate din lista, cate una la fiecare iteratie.
+Afiseaza pe ecran fiecare membru din lista, cate unul la fiecare iteratie.
+
+```{python}
+numere = [27, 7, 4, 32]
+for numar in numere:
+    print(numar)
+```
+
+```{python}
+numere = [27, 7, 4, 32]
+total = 0
+for numar in numere:
+    print(numar)
+    total = total + numar
+print(f"Total = {total}")
+```
+
+
+```{python}
+cnp_cautat = "1900512123456"
+baza_date_clienti = ["1890101001122", 
+                     "7910303445566", 
+                     "1900512123456", 
+                     "5010202998877"]
+
+for cnp in baza_date_clienti:
+    print(f"Scanez: {cnp}")
+    
+    if cnp == cnp_cautat:
+        print("Client găsit! Opresc scanarea bazei de date.")
+        break
+
+print("Se executa restul programului...")
+```
+
+***
 
 ## Functia range()
 
+Vrem sa cream o lista cu numerele 1, 2, 3, 4.
+
 ```{python}
-for i in range (5):
-    print(i)
+# lista = [1,2,3,4]
+lista = list(range(1,5))
+print(lista)
 ```
 
 
-## Switch case
+## Match case (Switch case)
+
+`match` `case` este echivalentul lui `switch` `case` din `C++` sau alte limbaje de programare.
 
 ```{python}
 value = 2
@@ -237,3 +296,9 @@ match value:
         result = "unknown"
 print(result)
 ```
+
+## Tema?
+
+## Titlu
+
+While si Break in Python (Tutorial Python Pentru Incepatori Ep. 6)

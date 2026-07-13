@@ -1,13 +1,14 @@
-# Scenariu 1: range() pentru un număr fix de repetiții
-# Vrem să trimitem 3 ping-uri către un IP
-for i in range(3):
-    # i va lua valorile 0, 1, 2
-    print(f"Trimitere pachet de date numărul {i + 1}...")
 
-print("-" * 20)
 
-# Scenariu 2: for pentru a trece prin colecții de date
-departamente = ["IT", "HR", "Contabilitate"]
+# Forma 2.
+# Parcurgem o lista. Printam doar numerele pozitive > 0.
+lista = [64, 32, 4, 1, 0, -8, 100]
+suma = 0
+i = 0
 
-for departament in departamente:
-    print(f"Generez raportul lunar pentru departamentul: {departament}")
+while True:
+    suma += lista[i]
+    i += 1
+
+print("Bucla while s-a oprit pentru ca"
+      " am intalnit o valoare <= 0")
