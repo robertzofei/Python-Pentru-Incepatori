@@ -1,0 +1,457 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "title: Structuri de decizie\n",
+        "jupyter: python3\n",
+        "---\n",
+        "\n",
+        "Astazi vom invata calculatorul sa ia decizii singur. Pentru a putea face asta, avem nevoie sa intelegem trei concepte: tipul de date Boolean, operatorii de comparatie, si instructiunile if/ else.\n",
+        "\n",
+        "## Tipul de date Boolean\n",
+        "In tipurile de date cu care am lucrat pana acum, adica cele pentru numere si siruri de caractere, puteam sa memoram aproape orice numar sau text pe care ni le doream. Ei bine, variabilele de tip Boolean pot stoca doar doua valori: True sau False, adica adevarat sau fals. Doua lucruri importante: valorile acestea nu apar scrise intre ghilimele (cum erau string-urile), si incep mereu cu litera mare."
+      ],
+      "id": "ed235920"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "#| code-line-numbers: true\n",
+        "a =  \"text\"\n",
+        "b = True\n",
+        "print(type(a))\n",
+        "print(type(b))"
+      ],
+      "id": "b4193d53",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "Asta inseamna ca variabila **a** este de tip string, iar variabila **b** este de tip Boolean."
+      ],
+      "id": "2d0e055f"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "#| code-line-numbers: true\n",
+        "a = True\n",
+        "b = False\n",
+        "print(a,b)"
+      ],
+      "id": "1e0171ee",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "Poate ca va intrebati de unde vine aceasta denumire de Boolean. Acest tip de date este numit dupa matematicianul britanic George Boole. El a inventat algebra logica si a pus bazele functionarii tuturor calculatoarelor si a limbajelor de programare pe care le folosim noi astazi.\n",
+        "\n",
+        "## Operatorii de Comparatie (==,  !=,  <,  >)\n",
+        "\n",
+        "De multe ori, o decizie implica comparatia dintre doua sau mai multe valori. Pentru asta, avem niste operatori speciali:\n",
+        "\n",
+        "| Operator | Ce înseamnă |\n",
+        "| :--- | :--- |\n",
+        "| `==` | Egal cu |\n",
+        "| `!=` | Nu e egal cu |\n",
+        "| `<` | Mai mic decât |\n",
+        "| `>` | Mai mare decât |\n",
+        "| `<=` | Mai mic sau egal cu |\n",
+        "| `>=` | Mai mare sau egal cu |\n",
+        "\n",
+        "Haide sa incepem prin a compara niste numere intre ele (rezultatul va aparea sub bucata de cod):"
+      ],
+      "id": "d011c815"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "1 == 1"
+      ],
+      "id": "cd18aa61",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "4 == 32"
+      ],
+      "id": "cb402c26",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "2 != 3"
+      ],
+      "id": "8f662d7e",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "2 != 2"
+      ],
+      "id": "53eecce4",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "64 == 64.0"
+      ],
+      "id": "27611aed",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "raw",
+      "metadata": {},
+      "source": [
+        "---"
+      ],
+      "id": "1ce165ad"
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "Putem compara si bucati de text:"
+      ],
+      "id": "e764298d"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "'salut' == 'salut'"
+      ],
+      "id": "7ab2d17f",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "'salut' == 'Salut'"
+      ],
+      "id": "6814d0d4",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "\n",
+        "Pana ca si valorile de adevar pot fi comparate intre ele:"
+      ],
+      "id": "8b921208"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "True == True"
+      ],
+      "id": "ac2ddb13",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "True != False"
+      ],
+      "id": "0df30e81",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "```{pyodide}\n",
+        "#| code-line-numbers: true\n",
+        "a = 1\n",
+        "print(a)\n",
+        "```\n",
+        "\n",
+        "### Diferenta dintre operatorul = si operatorul ==\n",
+        "\n",
+        "Acesti doi operatori sunt usor de confundat, iata ce trebuie sa retineti ca sa nu-i incurcati:\n",
+        "\n",
+        "- Operatorul = pune valoarea din dreapta in variabila din stanga\n",
+        "- Operatorul == (egal cu) verifica daca doua valori sunt egale\n",
+        "\n",
+        "Exemplu:"
+      ],
+      "id": "90e71092"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "#| code-line-numbers: true\n",
+        "a = 2 \n",
+        "print(a == 2) # verifica daca valoarea din variabila 'a' este egala cu 2"
+      ],
+      "id": "204185ad",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "## Operatori Booleeni (and, or, not)\n",
+        "Avem, de asemenea, la dispozitia noastra si operatorii, **and**, **or**, si respectiv, **not**.\n",
+        "\n",
+        "Operatorul **and** verifica daca absolut toate expresiile comparate sunt adevarate."
+      ],
+      "id": "d5e600be"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "(1 < 5) and (2 < 5)"
+      ],
+      "id": "bf5435e1",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "(1 < 5) and (2 < 5) and (10 < 5)"
+      ],
+      "id": "5bfb20eb",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "Vedem ca e de ajuns ca o singura expresie sa fie falsa ca rezultatul sa fie fals.\n",
+        "\n",
+        "\n",
+        "Operatorul **or** verifica daca cel putin una dintre expresii este adevarata."
+      ],
+      "id": "11cc4cde"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "(1 == 2) or (2 == 2)"
+      ],
+      "id": "a27b00af",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "Operatorul **not** neaga valoarea de adevar. Spre deosebire de **and** si **or**, **not** opereaza pe o singura expresie. Pur si simplu returneaza valoarea opusa."
+      ],
+      "id": "cd3fa931"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "not True"
+      ],
+      "id": "40eef8d3",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "## If/ Else\n",
+        "\n",
+        "Vrem sa se execute o bucata de cod daca si nu mai daca se indeplineste o conditie, dar cum putem sa facem asta? Pai, cu ajutorul structurilor de decizie **(if, else, elif)**:\n",
+        "\n",
+        "### Instructiunea if\n",
+        "\n",
+        "Sa zicem ca avem un program care verifica daca numele cuiva este \"Alin\". Ne prefacem ca cineva a introdus mai devreme o valoare in variabila *nume*."
+      ],
+      "id": "e3eb5445"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "#| code-line-numbers: true\n",
+        "nume = \"Alin\"\n",
+        "if nume == \"Alin\":\n",
+        "    print(\"Salut, Alin!\")"
+      ],
+      "id": "0b67fed0",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "In limbaj natural, am citi liniile de cod de mai sus astfel:\n",
+        "\n",
+        "- In variabila **nume** se memoreaza textul \"Alin\"\n",
+        "- Daca valoarea din variabila **nume** este aceeasi sau este egala cu textul \"Alin\", atunci se afiseaza pe ecran mesajul \"Salut, Alin!\"\n",
+        "\n",
+        "Daca expresia urmata de if este adevarata, sau, cu alte cuvinte, conditia a fost indeplinita, atunci toate liniile de cod ce scrise cu alineat imediat sub instructiunea if se vor executa.  Acest alineat, in lumea programarii, se numeste indentare, si se obtine apasand tasta **tab**. Daca expresia se evalueaza ca fiind falsa, insa, atunci calculatorul ignora liniile de cod indentate aflate imediat sub if.\n",
+        "\n",
+        "Instructiunea **if** contine:\n",
+        "\n",
+        "1. Cuvantul cheie **if**\n",
+        "2. O conditie (adica o expresie care se evalueaza ca fiind True sau False)\n",
+        "3. Doua puncte **:**\n",
+        "4. Incepand cu linia urmatoare, un bloc indentat de cod (numit si clauza if)\n",
+        "\n",
+        "\n",
+        "### Instructiunea else\n",
+        "\n",
+        "Sa zicem ca avem un site si vrem sa verificam daca un utilizator si-a introdus parola corecta."
+      ],
+      "id": "c5fe94c9"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "#| code-line-numbers: true\n",
+        "parola = \"xyz\"\n",
+        "\n",
+        "if parola == \"xyz\": \n",
+        "    print(\"Acces permis.\") \n",
+        "else: \n",
+        "    print(\"Ati introdus parola gresita.\")"
+      ],
+      "id": "47475c2a",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "In limbaj natural, am citi aceste linii de cod astfel: \n",
+        "\n",
+        "- Parola introdusa de utilizator este **xyz**. \n",
+        "- Daca parola este **xyz**, atunci se afiseaza pe ecran mesajul \"Acces permis\". \n",
+        "- Altfel, se afiseaza mesajul \"Ati introdus parola gresita.\"\n",
+        "\n",
+        "Instructiunea **else** contine:\n",
+        "\n",
+        "1. Cuvantul cheie **else**\n",
+        "2. Doua puncte **:**\n",
+        "3. Incepand cu linia urmatoare, un bloc indentat de cod (numit si clauza else)\n",
+        "\n",
+        "### Instructiunea elif\n",
+        "\n",
+        "Ar putea exista situatia in care trebuie sa verificam mai multe cazuri. In aceasta situatie folosim instructiunea **elif**, care inseamna **else if**. Aceasta instructiune poate fi folosita doar daca urmeaza dupa o instructiune **if** sau o alta instructiune **elif**.\n",
+        "\n",
+        "Sa luam un exemplu in care verificam varsta cuiva:"
+      ],
+      "id": "c6efcd06"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "#| code-line-numbers: true\n",
+        "varsta = 1520 # de ani\n",
+        "\n",
+        "if varsta < 18:\n",
+        "    print(\"Esti copil.\")\n",
+        "elif varsta > 1000:\n",
+        "    print(\"🧛 Esti vampir.\")\n",
+        "elif varsta > 18:\n",
+        "    print(\"Esti adult.\")"
+      ],
+      "id": "53f2966c",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "Observati ca ordinea instructiunilor **elif** din acest exemplu este una avantajoasa. Daca inversam cele doua **elif**-uri, programul ar fi putut oferi raspunsuri gresite cand valoarea varstei depasea 1000. Ar fi spus ca o persoana de 1001 de ani este adult. Asta se intampla pentru ca expresiile se evalueaza pe rand de sus in jos. Odata ce una este corecta, se executa codul din clauza instructiunii respective, iar restul nu se mai verifica. De asemenea, bineinteles ca nu exista persoane de 1000 de ani sau vampiri (mai stii?)."
+      ],
+      "id": "bdfdb1fa"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "#| code-line-numbers: true\n",
+        "# Varianta gresita\n",
+        "varsta = 1001 # de ani\n",
+        "\n",
+        "if varsta < 18:\n",
+        "    print(\"Esti copil.\")\n",
+        "elif varsta > 18:\n",
+        "    print(\"Esti adult.\")\n",
+        "elif varsta > 1000:\n",
+        "    print(\"🧛 Esti vampir.\")"
+      ],
+      "id": "26047560",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "Instructiunea **elif** contine:\n",
+        "\n",
+        "1. Cuvantul cheie **elif**\n",
+        "2. O conditie (care se evalueaza cu True sau False)\n",
+        "3. Doua puncte **:**\n",
+        "4. Incepand cu linia urmatoare, un bloc indentat de cod (numit si clauza elif)"
+      ],
+      "id": "3d20f52c"
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "name": "python3",
+      "language": "python",
+      "display_name": "Python 3 (ipykernel)",
+      "path": "C:\\Users\\rzofe\\AppData\\Local\\Python\\pythoncore-3.14-64\\share\\jupyter\\kernels\\python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}

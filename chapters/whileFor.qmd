@@ -18,11 +18,15 @@ In acest capitol vom invata urmatoarele concepte:
 - Bucla `for` -- repeta un bloc de cod de un numar specific de ori, sau pentru fiecare obiect dintr-o lista.
 - Functia `range()` -- genereaza o secventa de numere. De obicei se foloseste pentru a se specifica de cate ori se repeta o bucla `for`.
 
+***
+
+Salutare dragii mei, eu sunt Robi, iar astazi vom invata cum functioneaza instructiunile `while` si `break` in Python.
+
 ## Bucle while
 
 Buclele `while`, (in engleza while loops) permit executarea in mod repetat a unei secvente de linii de cod cat timp se respecta o anumita conditie.
 
-Ne uitam la aceste doua programe si nu dureaza mult sa observam ca arata aproape identic: singura diferenta dintre ele este ca in primul avem instructiunea `if`, iar in celalalt avem instructiunea `while`.
+Incepem cu buclele `while`. Haide sa ne uitam la aceste doua bucati de cod. 
 
 ```{python}
 numar = 0
@@ -40,7 +44,11 @@ while numar < 3:
 
 ***
 
-Avem o variabila numita `numar` in care stocam valoarea 0. Apoi urmeaza conditia: daca, `numar` este strict mai mic decat 3, atunci se afiseaza pe ecran numarul si ii crestem valoarea acestuia cu 1, adica din 0 devine 0 + 1 = 1. In continuare, insa,  apare diferenta:
+Nu dureaza mult sa observam ca arata aproape identic: singura diferenta dintre ele este ca in primul avem instructiunea `if`, iar in celalalt avem instructiunea `while`.
+
+
+
+Avem variabila `numar` in care memoram valoarea 0. Apoi urmeaza conditia: daca, `numar` este strict mai mic decat 3, atunci se afiseaza pe ecran numarul si ii crestem valoarea acestuia cu 1, adica din 0 devine 0 + 1 = 1. In continuare, insa,  apare diferenta:
 
 - Daca conditia este respectata, clauza `if` (adica blocul de cod indentat aflat imediat sub instructiunea `if`) se executa o singura data .
 
@@ -141,7 +149,6 @@ Acest program ar fi trebuit sa numere de la 1 pana la 10. Dar vedem ca este impu
 
 ```{python}
 lista = [16, 4, 1, 0, -2, -4, 100]
-
 suma = 0
 i = 0
 
@@ -297,7 +304,9 @@ match value:
 print(result)
 ```
 
-## Tema?
+## Leftovers
+
+
 
 ## Titlu
 
