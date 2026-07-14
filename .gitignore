@@ -220,6 +220,7 @@ __marimo__/
 # Quarto
 .quarto/
 **/*.quarto_ipynb
+*.quarto_ipynb*
 _book/
 /.quarto/
 
