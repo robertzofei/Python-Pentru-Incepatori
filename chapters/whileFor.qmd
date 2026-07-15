@@ -14,8 +14,8 @@ In acest capitol vom invata urmatoarele concepte:
 
 - Bucla `while` -- repeta un bloc de cod cat timp conditia este adevarata (True).
 - Instructiunea `break` -- opreste executia unei bucle inainte de indeplinirea conditiei.
-- Instructiunea `continue` -- trece peste restul iteratiei curente si sare la urmatoarea.
 - Bucla `for` -- repeta un bloc de cod de un numar specific de ori, sau pentru fiecare obiect dintr-o lista.
+- Instructiunea `continue` -- trece peste restul iteratiei curente si sare la urmatoarea.
 - Functia `range()` -- genereaza o secventa de numere. De obicei se foloseste pentru a se specifica de cate ori se repeta o bucla `for`.
 
 ***
@@ -202,6 +202,57 @@ while True creeaza din start o bucla infinita controlata. Programul porneste exe
 ***
 
 
+## Bucle for
+
+```{python}
+lista = ["Michael Jackson", "Selly", "Maria"]
+print(lista[0])
+print(lista[1])
+print(lista[2])
+```
+
+```{python}
+lista = ["Michael Jackson", "Selly", "Maria"]
+for membru in lista:
+    print(membru)
+```
+
+Afiseaza pe ecran fiecare membru din lista, cate unul la fiecare iteratie.
+
+```{python}
+multime = [27, 7, 4, 32]
+for numar in multime:
+    print(numar)
+```
+
+```{python}
+multime = [27, 7, 4, 32]
+total = 0
+for numar in multime:
+    print(numar)
+    total = total + numar
+print(f"Total = {total}")
+```
+
+
+```{python}
+cnp_cautat = "1900512123456"
+baza_date_clienti = ["1890101001122", 
+                     "7910303445566", 
+                     "1900512123456", 
+                     "5010202998877"]
+
+for cnp in baza_date_clienti:
+    print(f"Scanez: {cnp}")
+    
+    if cnp == cnp_cautat:
+        print("Client găsit! Opresc scanarea bazei de date.")
+        break
+
+print("Se executa restul programului...")
+```
+
+***
 
 ## Instructiunea continue
 
@@ -227,50 +278,6 @@ for factura in facturi:
     total_incasari += factura
 
 print(f"Total procesat: {total_incasari} RON")
-```
-
-***
-
-## Bucle for
-```{python}
-lista = ["Michael Jackson", "Selly", "Maria"]
-for membru in lista:
-    print(membru)
-```
-
-Afiseaza pe ecran fiecare membru din lista, cate unul la fiecare iteratie.
-
-```{python}
-numere = [27, 7, 4, 32]
-for numar in numere:
-    print(numar)
-```
-
-```{python}
-numere = [27, 7, 4, 32]
-total = 0
-for numar in numere:
-    print(numar)
-    total = total + numar
-print(f"Total = {total}")
-```
-
-
-```{python}
-cnp_cautat = "1900512123456"
-baza_date_clienti = ["1890101001122", 
-                     "7910303445566", 
-                     "1900512123456", 
-                     "5010202998877"]
-
-for cnp in baza_date_clienti:
-    print(f"Scanez: {cnp}")
-    
-    if cnp == cnp_cautat:
-        print("Client găsit! Opresc scanarea bazei de date.")
-        break
-
-print("Se executa restul programului...")
 ```
 
 ***
@@ -303,10 +310,6 @@ match value:
         result = "unknown"
 print(result)
 ```
-
-## Leftovers
-
-
 
 ## Titlu
 

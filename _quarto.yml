@@ -13,6 +13,7 @@ book:
     - chapters/ifElse.qmd
     - chapters/whileFor.qmd
     - chapters/functii.qmd
+    - chapters/liste.qmd
     - chapters/references.qmd
 
 bibliography: chapters/references.bib
