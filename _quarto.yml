@@ -14,6 +14,7 @@ book:
     - chapters/whileFor.qmd
     - chapters/functii.qmd
     - chapters/liste.qmd
+    - chapters/dictionare.qmd
     - chapters/references.qmd
 
 bibliography: chapters/references.bib

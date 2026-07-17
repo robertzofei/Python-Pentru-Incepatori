@@ -6,7 +6,27 @@ format:
     code-line-numbers: true
 ---
 
----
+***
+
+## Intrebari
+
+1. Cu ce cuvant se creeaza o functie?
+2. La ce te ajuta functiile in programele tale?
+3. Cand se executa codul dintr-o functie: cand functia este definita, sau atunci cand functia este apelata?
+4. Care e diferenta dintre o functie si apelul unei functii?
+5. How many global scopes are there in a Python program? How many
+local scopes?
+1. What happens to variables in a local scope when the function call returns?
+2. What is a return value? Can a return value be part of an expression?
+3. If a function does not have a return statement, what is the return value
+of a call to that function?
+1. How can you force a variable in a function to refer to the global variable?
+2.  What is the data type of None?
+3.  What does the import areallyourpetsnamederic statement do?
+4.  If you had a function named bacon() in a module named spam, how
+would you call it after importing spam?
+1.  How can you prevent a program from crashing when it gets an error?
+2.  What goes in the try clause? What goes in the except clause?
 
 Am folosit pana acum functiile `print()`, `len()`, `input()` si multe altele. Aceste functii sunt deja incluse in Python, dar stiati ca putem sa ne scriem propriile noastre functii?
 
@@ -17,10 +37,28 @@ Ce vom invata in acest capitol:
 - valoarea `none`
 - Variabile locale si variabile globale
 
+
+
 ## Instructiunea def
+
+### Cu ce cuvant se creeaza o functie?
+
+
 
 ## Instructiunea return
 
-## Valoarea none
+### Ce este o valoare returnata? Poate sa faca parte dintr-o expresie?
+2. What is a return value? Can a return value be part of an expression?
+3. If a function does not have a return statement, what is the return value
+of a call to that function?
+
+
+
+## Valoarea None
+
+### Ce tip de date este valoare None?
+What is the data type of None?
 
 ## Variabile locale si variabile globale
+
+1. How can you force a variable in a function to refer to the global variable?
