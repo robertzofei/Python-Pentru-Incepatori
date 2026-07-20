@@ -1,12 +1,21 @@
 ---
 title: Functii
 jupyter: python3
-format:
-  html:
-    code-line-numbers: true
 ---
 
 ***
+
+Am folosit pana acum functiile `print()`, `len()`, `input()` si multe altele. Aceste functii sunt deja incluse in Python, dar stiati ca putem sa ne scriem propriile noastre functii?
+
+### La ce ajuta functiile?
+
+Functiile sunt ca niste mini programe in interiorul programului nostru principal. Ne ajuta la:
+
+- **Reutilizare**: Scriem codul o singura data si il apelam de cate ori avem nevoie. Nu rescriem acelasi cod iar si iar. Astfel evitam sa ne repetam.
+- **Organizare**: Impartim un program mare in functii mici.
+- Obtinerea unui **cod lizibil**: O functie cu un nume sugestiv ii spune instant cititorului ce face codul, fara a fi nevoit sa desluseasca ce au scris altii inaintea lui.
+- O **mentenanta mai usoara**: Daca trebuie sa reparam sau sa schimbam ceva, facem modificarea intr-un singur loc, nu in zece.
+
 
 ## Intrebari
 
@@ -28,7 +37,9 @@ would you call it after importing spam?
 1.  How can you prevent a program from crashing when it gets an error?
 2.  What goes in the try clause? What goes in the except clause?
 
-Am folosit pana acum functiile `print()`, `len()`, `input()` si multe altele. Aceste functii sunt deja incluse in Python, dar stiati ca putem sa ne scriem propriile noastre functii?
+
+
+***
 
 Ce vom invata in acest capitol:
 
@@ -43,7 +54,28 @@ Ce vom invata in acest capitol:
 
 ### Cu ce cuvant se creeaza o functie?
 
+```{python}
+# Calculam media lui Mihai.
+note_mihai = [6, 5, 4]
+total1 = sum(note_mihai)
+media1 = total1 / len(note_mihai)
+print(media1) # media1 = 5.0
 
+# -----------------------------------------
+# Calculam media lui Andrei.
+note_andrei = [8, 10, 9]
+total2 = sum(note_andrei)
+media2 = total2 / len(note_andrei)
+print(media2) # media2 = 9.0
+
+```
+
+```{python}
+# def calculeaza_media(numere):
+#     continue
+```
+
+***
 
 ## Instructiunea return
 

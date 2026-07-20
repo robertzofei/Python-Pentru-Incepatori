@@ -1,9 +1,6 @@
 project:
   type: book
 
-filters:
-  - r-wasm/live
-
 book:
   title: "Python pentru Începatori"
   author: "Robert Zofei"
@@ -22,10 +19,11 @@ bibliography: chapters/references.bib
 format:
   html:
     theme:
-      light: cosmo
-      dark: darkly
-
+      light: [cosmo, custom.scss]
+      dark: [darkly, custom.scss]
+      
     # respect-user-color-scheme: true
+    code-line-numbers: true
 
   pdf:
     documentclass: scrreprt
