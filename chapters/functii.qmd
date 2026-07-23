@@ -7,7 +7,7 @@ jupyter: python3
 
 Am folosit pana acum functiile `print()`, `len()`, `input()` si multe altele. Aceste functii sunt deja incluse in Python, dar stiati ca putem sa ne scriem propriile noastre functii?
 
-### La ce ajuta functiile?
+### La ce ne ajuta functiile?
 
 Functiile sunt ca niste mini programe in interiorul programului nostru principal. Ne ajuta la:
 
@@ -16,38 +16,14 @@ Functiile sunt ca niste mini programe in interiorul programului nostru principal
 - Obtinerea unui **cod lizibil**: O functie cu un nume sugestiv ii spune instant cititorului ce face codul, fara a fi nevoit sa desluseasca ce au scris altii inaintea lui.
 - O **mentenanta mai usoara**: Daca trebuie sa reparam sau sa schimbam ceva, facem modificarea intr-un singur loc, nu in zece.
 
-
-## Intrebari
-
-1. Cu ce cuvant se creeaza o functie?
-2. La ce te ajuta functiile in programele tale?
-3. Cand se executa codul dintr-o functie: cand functia este definita, sau atunci cand functia este apelata?
-4. Care e diferenta dintre o functie si apelul unei functii?
-5. How many global scopes are there in a Python program? How many
-local scopes?
-1. What happens to variables in a local scope when the function call returns?
-2. What is a return value? Can a return value be part of an expression?
-3. If a function does not have a return statement, what is the return value
-of a call to that function?
-1. How can you force a variable in a function to refer to the global variable?
-2.  What is the data type of None?
-3.  What does the import areallyourpetsnamederic statement do?
-4.  If you had a function named bacon() in a module named spam, how
-would you call it after importing spam?
-1.  How can you prevent a program from crashing when it gets an error?
-2.  What goes in the try clause? What goes in the except clause?
-
-
-
 ***
 
 Ce vom invata in acest capitol:
 
-- instructiunea `def`
-- instructiunea `return`
-- valoarea `none`
-- Variabile locale si variabile globale
-
+- la ce ne ajuta functiile;
+- cum scriem o functie folosind instructiunile `def` si `return`;
+- valoarea `none`;
+- variabile locale si variabile globale.
 
 
 ## Instructiunea def
@@ -71,18 +47,22 @@ print(media2) # media2 = 9.0
 ```
 
 ```{python}
-# def calculeaza_media(numere):
-#     continue
-```
+def calculeaza_media(note):
+    total = sum(note)
+    return total / len(note)
+
+note_mihai = [6, 5, 4]
+note_andrei = [8, 10, 9]
+
+print(calculeaza_media(note_mihai))  # 5.0
+print(calculeaza_media(note_andrei))  # 9.0
+``` 
 
 ***
 
 ## Instructiunea return
 
 ### Ce este o valoare returnata? Poate sa faca parte dintr-o expresie?
-2. What is a return value? Can a return value be part of an expression?
-3. If a function does not have a return statement, what is the return value
-of a call to that function?
 
 
 
@@ -94,3 +74,34 @@ What is the data type of None?
 ## Variabile locale si variabile globale
 
 1. How can you force a variable in a function to refer to the global variable?
+
+
+## Intrebari
+
+- [X] La ce ne ajuta functiile?
+
+- [X] Cu ce cuvant se creeaza o functie?
+
+- [ ] Cand se executa codul dintr-o functie -- cand functia este definita, sau atunci cand functia este apelata?
+  
+- [ ] Care e diferenta dintre o functie si apelul unei functii?
+
+- [ ] Câte domenii de vizibilitate globale (global scopes) există într-un program Python? Dar domenii de vizibilitate locale (local scopes)?
+  
+- [ ] Ce se întâmplă cu variabilele dintr-un domeniu local după ce apelul funcției se încheie?
+  
+- [ ] Ce este o valoare returnată (return value)? Poate o valoare returnată să facă parte dintr-o expresie?
+
+- [ ] Dacă o funcție nu conține o instrucțiune return, care va fi valoarea returnată în urma apelării acelei funcții?
+
+- [ ] Cum poți forța o variabilă din interiorul unei funcții să facă referire la o variabilă globală?
+
+- [ ] Care este tipul de date al valorii None?
+
+- [ ] Ce face instrucțiunea import areallyourpetsnamederic?
+
+- [ ] Dacă ai avea o funcție numită bacon() într-un modul numit spam, cum ai apela-o după importarea modulului spam?
+
+- [ ] Cum poți preveni întreruperea bruscă (crash-ul) a unui program atunci când apare o eroare?
+
+- [ ] Ce fel de cod se include în blocul try? Dar în blocul except?
