@@ -46,6 +46,8 @@ print(media2) # media2 = 9.0
 
 ```
 
+O functie se creeaza folosind cuvantul cheie `def`.
+
 ```{python}
 def calculeaza_media(note):
     total = sum(note)
