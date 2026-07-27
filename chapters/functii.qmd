@@ -64,16 +64,29 @@ print(calculeaza_media(note_andrei))  # 9.0
 
 ## Instructiunea return
 
+```{python}
+def suma2(a,b)
+    return a+b
+
+print(suma2(3,7))
+```
+
 ### Ce este o valoare returnata? Poate sa faca parte dintr-o expresie?
 
 
 
 ## Valoarea None
 
+
 ### Ce tip de date este valoare None?
 What is the data type of None?
 
 ## Variabile locale si variabile globale
+
+```{python}
+def ultima_cifra(nr):
+    return
+```
 
 1. How can you force a variable in a function to refer to the global variable?
 
