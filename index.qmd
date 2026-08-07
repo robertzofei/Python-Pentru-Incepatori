@@ -5,6 +5,7 @@
 2. [Structuri repetitive](chapters/whileFor.qmd)
 3. [Functii](chapters/functii.qmd)
 4. [Liste](chapters/liste.qmd)
+5. [Dictionare](chapters/dictionare.qmd)
 
 
 Această carte a fost realizată folosind Quarto.
