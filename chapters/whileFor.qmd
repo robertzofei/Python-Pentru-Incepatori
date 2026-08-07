@@ -197,7 +197,7 @@ Programul continua...
 
 ***
 
-while True creeaza din start o bucla infinita controlata. Programul porneste executia buclei fara sa verifice nicio conditie prealabila.
+`while True` creeaza din start o bucla infinita controlata. Programul porneste executia buclei fara sa verifice nicio conditie prealabila.
 
 ***
 
@@ -205,35 +205,80 @@ while True creeaza din start o bucla infinita controlata. Programul porneste exe
 ## Bucle for
 
 ```{python}
-lista = ["Michael Jackson", "Selly", "Maria"]
+lista = ["Michael Jackson", "Selly", "Fane Mecanic"]
 print(lista[0])
 print(lista[1])
 print(lista[2])
 ```
 
+***
+
+Dacă lista ta de utilizatori are doar trei persoane, e ok sa scrii codul manual linie cu linie. Dar ce te faci cand aplicația ta crește și se mai inscrie inca unul?Dar inca 100?
+[lista creste cu 1 om, apoi brusc cu 100 de oameni]
+
+Salutare, dragii mei, eu sunt Robi, iar astazi vom invata cum sa folosim o bucla for sau un for loop in Python ca sa nu trebuiasca sa dam copy paste la aceeasi linie de cod de 1000 de ori. Ne vom uita la 3 exemple de programe: 
+- in primul vom parcurge o lista de nume si le vom afisa
+- in al doilea vom calcula suma tuturor numerelor dintr-o lista
+- iar in al treilea vom cauta un CNP intr-o basa de date.
+
+Haideti sa incepem, va recomand sa scrieti codul odata cu mine daca vreti sa retineti mai bine informatia.
+
+[Sterg cele 3 linii de cod cu `print(lista[k])`]
+
+***
+
 ```{python}
-lista = ["Michael Jackson", "Selly", "Maria"]
+lista = ["Michael Jackson", "Selly", "Fane Mecanic"]
 for membru in lista:
     print(membru)
 ```
 
-Afiseaza pe ecran fiecare membru din lista, cate unul la fiecare iteratie.
+***
+
+Folosind aceasta noua structura, programul va afisa pe ecran fiecare membru din lista, cate unul la fiecare iteratie. Indiferent că ai trei membri în listă sau trei milioane, programul va parcurge automat toate datele.
+
+Sintaxa este simpla. Cand scriem `for membru in lista`, ii spunem lui Python sa ia fiecare element din lista noastra, unul cate unul. Variabila membru este doar un nume temporar pe care il dam noi. La prima iteratie, membru devine "Michael Jackson", si il afiseaza pe ecran. Apoi se intoarce, membru devine "Selly", si tot asa pana cand se termina lista. Am rezolvat in mod elegant problema din doua linii de cod.
+
+***
+
+Dar buclele nu sunt doar pentru afisat text, haideti sa calculam ceva cu ele.
+Daca avem o lista de numere pe care vrem sa le afisam pe rand, procedam la fel ca mai inainte.
 
 ```{python}
 multime = [27, 7, 4, 32]
 for numar in multime:
     print(numar)
 ```
+
+***
+
+Dar ce ne facem, insa, daca vrem sa adunam toate aceste numere si sa vedem ce suma obtinem?
 
 ```{python}
 multime = [27, 7, 4, 32]
 total = 0
+i = 0
 for numar in multime:
-    print(numar)
     total = total + numar
-print(f"Total = {total}")
+    print(f"Iteratia {i}: Numar curent = {numar}; Totalul curent = {total}")
+    i += 1
+print(f"Totalul final = {total}")
 ```
 
+***
+
+Avem nevoie de doua noi variabile: 
+- `total`, in care memoram suma.
+- `i`, in care memoram iteratia sau pasul la care ne aflam.
+
+Similar cu ce faceam mai devreme, cand scriem `for numar in multime`, ii spunem lui Python sa parcurga fiecare numar din lista noastra, unul cate unul. La prima iteratie, iteratia 0, la totalul nostru care initial e 0, se adauga primul numar la care ne uitam, adica 27. Afisam mesajul pe ecran si crestem valoarea lui `i` pentru ca urmeaza sa trecem la urmatorul pas. La iteratia 1, la total adaugam valoarea urmatorului numar din lista, si obtinem 27 + 7 = 34. Afisam mesajul si crestem iteratia. Si tot asa pana la finalul listei. Apropo, sa stiti ca nu era nevoie de acest `i` ca sa mearga programul. Il folosim doar ca sa intelegem noi mai bine cum se executa pas cu pas.
+
+Mai mult ca sigur va intrebati de ce am numerotat iteratiile sau pasii de la 0 si nu de la 1. Ei bine, raspunsul sta in felul in care este organizata memoria calculatoarelor. Cu indexul acesta `i`, noi masuram cat de departe suntem de inceputul unei liste. Pentru ca suntem fix la inceputul acelui bloc de memorie, in cazul nostru lista de numere, distanta e fix zero.
+E bine sa ne obisnuim sa numaram de la 0. Cu cat veti studia mai mult calculatoarele, cu atat va incepe sa aiba mai mult sens acest lucru.
+
+***
+
+Haide sa trecem la al treilea exemplu, unde vom cauta CNP-ul unei persoane intr-o baza de date. Nu vom lucra cu o baza de date reala pentru ca ne aflam la inceput de drum si vrem sa fie totul cat mai simplu.
 
 ```{python}
 cnp_cautat = "1900512123456"
@@ -253,6 +298,9 @@ print("Se executa restul programului...")
 ```
 
 ***
+
+Iata CNP-ul cautat, iata baza de date, care in cazul nostru este o lista ca cele de mai devreme.
+Linia de cod `for cnp in baza_date_clienti:` ii spune lui Python sa parcurga pe rand fiecare CNP din lista cu CNP-uri. La prima iteratie afisam pe ecran mesajul care ne ajuta sa vedem la ce pas suntem. Avem un if care verifica daca CNP-ul la care ne uitam in acest pas este cel pe care il cautam folosind operatorul de comparatie `==`. Expresia nu este adevarata, deci nu se afiseaza mesajul de atentionare, iar bucla `for` continua. La a treia iteratie observam ca CNP-ul curent din lista coincide cu cel pe care il cautam, asa ca se afiseaza mesajul de atentionare si se opreste bucla `for`.
 
 ## Instructiunea continue
 
